@@ -1,0 +1,9 @@
+<div class="container" style="padding: 6rem;">
+    <h1>{{blog.heading}}</h1>
+    <h4 class="font-weight-light text-muted">{{blog.subHeading}}</h4>
+    <div class="category">
+        <span *ngFor="let cat of blog.category" class="badge badge-pill badge-primary ml-1 mr-1">{{cat}}</span>
+    </div>
+    <img src="{{blog.image}}" alt="" class="img-fluid">
+    <h6 class="lead">{{blog.content}}</h6>
+</div>

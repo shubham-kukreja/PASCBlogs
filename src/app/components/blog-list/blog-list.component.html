@@ -1,0 +1,7 @@
+<div class="container">
+    <div *ngIf="blogs">
+        <div *ngFor="let blog of blogs" [routerLink]="['/blogdetail', blog.id]" class="blog-item">
+            <app-blog [blog]="blog"></app-blog>
+        </div>
+    </div>
+</div>
