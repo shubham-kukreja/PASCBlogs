@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogComponent } from './components/blog/blog.component';
+import {MatIconModule, MatIcon} from '@angular/material/icon';
 
 import { environment } from '../environments/environment'
 import { AngularFireModule } from 'angularfire2'
@@ -42,7 +43,8 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatIconModule
   ],
   providers: [
 

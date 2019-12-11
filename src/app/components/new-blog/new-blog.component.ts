@@ -11,7 +11,7 @@ import { finalize } from 'rxjs/operators';
 })
 export class NewBlogComponent implements OnInit {
   heading : string;
-  subHeading : string = null;
+  subHeading : string;
   image : string = null;
   content : string;
   uploadPer : Observable<number>
@@ -43,12 +43,15 @@ export class NewBlogComponent implements OnInit {
       const task = this.storage.upload(path, file)
       this.uploadPer = task.percentageChanges()
       task.snapshotChanges().pipe(
-        finalize(() => this.downloadURL = fileRef.getDownloadURL())
+        finalize(() => {
+          this.downloadURL = fileRef.getDownloadURL()
+          this.downloadURL.subscribe(url => (this.image = url));
+        })
      )
     .subscribe()
       console.log('Image Uploaded');
       console.log(task);
-      
+      console.log(fileRef.getDownloadURL())
     }
   }
 }

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { NewBlogComponent } from './components/new-blog/new-blog.component';
-
+import {MatIconModule} from '@angular/material/icon';
 
 const routes: Routes = [
   {path : 'home', component : BlogListComponent },
