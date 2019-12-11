@@ -11,9 +11,15 @@ import { BlogComponent } from './components/blog/blog.component';
 import { environment } from '../environments/environment'
 import { AngularFireModule } from 'angularfire2'
 import {AngularFirestoreModule } from 'angularfire2/firestore'
-import { BlogService } from './services/blog.service'
-
-
+import { BlogService } from './services/blog.service';
+import { NewBlogComponent } from './components/new-blog/new-blog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button'
+import { MatInputModule } from '@angular/material/input'
+import { FormsModule } from '@angular/forms'
+import { MatProgressBarModule } from '@angular/material/progress-bar'
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 @NgModule({
   declarations: [
@@ -21,14 +27,22 @@ import { BlogService } from './services/blog.service'
     NavbarComponent,
     BlogDetailComponent,
     BlogListComponent,
-    BlogComponent
+    BlogComponent,
+    NewBlogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    MatProgressBarModule
   ],
   providers: [
 

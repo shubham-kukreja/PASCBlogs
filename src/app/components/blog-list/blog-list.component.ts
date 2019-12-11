@@ -15,7 +15,8 @@ export class BlogListComponent implements OnInit {
   constructor(private blogService : BlogService) { }
 
   ngOnInit() {
-    this.blogService.getBlogsFromFirestore().subscribe(item => this.blogs = item)
+    console.log("Hey")
+    this.blogService.getBlogsFromFirestore().subscribe(item => {this.blogs = item})
   }
 
 }

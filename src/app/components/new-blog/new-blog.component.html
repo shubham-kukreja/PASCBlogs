@@ -1,0 +1,13 @@
+<mat-form-field>
+    <input matInput placeholder="Heading" [(ngModel)]="heading">
+  </mat-form-field>
+<br>
+<mat-form-field>
+    <textarea matInput placeholder="Start Writing Here.." [(ngModel)]="content"></textarea>
+</mat-form-field>
+<br>
+<div>
+  <input type="file" name="file" id="file" (change)= "uploadImage($event)">
+  <mat-progress-bar mode="determinate" value="{{uploadPer | async}}"></mat-progress-bar>
+</div>
+<button mat-raised-button color="blue" (click)="createPost()">Create Post</button>

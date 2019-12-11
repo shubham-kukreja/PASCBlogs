@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./blog-detail.component.css']
 })
 export class BlogDetailComponent implements OnInit {
-    blog : Blog;
+    blog ;
 
   constructor(private blogService : BlogService, 
     private route : ActivatedRoute,
@@ -18,6 +18,6 @@ export class BlogDetailComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
-    this.blog = this.blogService.getSelectedBlog(id);
+    this.blog = this.blogService.getSelectedBlogFromFirestore(id).subscribe(data => this.blog = data);
   }
 }
