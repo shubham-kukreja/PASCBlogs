@@ -21,6 +21,22 @@ import { MatInputModule } from '@angular/material/input'
 import { FormsModule } from '@angular/forms'
 import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { AngularFireStorageModule } from 'angularfire2/storage';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { EscapeHtmlPipe } from './pipes/keep-html.pipe';
+import { AdminComponent } from './components/admin/admin.component';
+import { LoginComponent } from './components/login/login.component';
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { ProfileComponent } from '../app/components/profile/profile.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { DropzoneDirective } from './dropzone.directive';
+import { UploaderComponent } from './uploader/uploader.component';
+import { UploadTaskComponent } from './upload-task/upload-task.component';
+import { ViewGalleryComponent } from './view-gallery/view-gallery.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +45,17 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
     BlogDetailComponent,
     BlogListComponent,
     BlogComponent,
-    NewBlogComponent
+    NewBlogComponent,
+    EscapeHtmlPipe,
+    AdminComponent,
+    LoginComponent,
+    ProfileComponent,
+    SignupComponent,
+    DropzoneDirective,
+    UploaderComponent,
+    UploadTaskComponent,
+    ViewGalleryComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +70,11 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
     MatInputModule,
     FormsModule,
     MatProgressBarModule,
-    MatIconModule
+    MatIconModule,
+    MatChipsModule,
+    MatProgressSpinnerModule,
+    CKEditorModule,
+    AngularFireAuthModule
   ],
   providers: [
 

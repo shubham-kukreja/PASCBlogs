@@ -1,3 +1,6 @@
 .blog-item{
     cursor: default;
 }
+ckeditor {
+    width: 80%;
+}

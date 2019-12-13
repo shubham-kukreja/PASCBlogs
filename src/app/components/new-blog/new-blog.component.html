@@ -1,17 +1,27 @@
+
+<div class="container">
 <mat-form-field>
-    <input matInput placeholder="Heading" [(ngModel)]="heading">
+    <input matInput placeholder="Post Title" [(ngModel)]="heading" class="input-field">
   </mat-form-field>
 <br>
 <mat-form-field>
-  <input matInput placeholder="Sub-Heading" [(ngModel)]="subHeading">
+  <input matInput placeholder="Sub-Heading" [(ngModel)]="subHeading"  class="input-field">
 </mat-form-field>
 <br>
 <mat-form-field>
-    <textarea matInput placeholder="Start Writing Here.." [(ngModel)]="content"></textarea>
+  <input matInput placeholder="Category" [(ngModel)]="category"  class="input-field">
 </mat-form-field>
 <br>
+  <ckeditor [editor]="Editor" [(ngModel)]="content" data="<p>Hello, world!</p>"  tagName="textarea"  [config]="{ toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedlist', 'numberedlist', 'blockquote', 'inserttable', 'undo', 'redo' ] }" ></ckeditor>  
+<br>
 <div>
-  <input type="file" name="file" id="file" (change)= "uploadImage($event)">
-  <mat-progress-bar mode="determinate" value="{{uploadPer | async}}"></mat-progress-bar>
+  <input type="file" name="file" id="file" class="btn" (change)= "uploadImage($event)">
+  <div [hidden]="!uploadPer">
+    <mat-progress-bar mode="determinate" value="{{uploadPer | async}}"></mat-progress-bar>
+  </div>
 </div>
-<button mat-raised-button color="blue" (click)="createPost()">Create Post</button>
+<div [hidden]="!created">
+  <mat-spinner></mat-spinner>
+</div>
+<button mat-raised-button color="blue" class="btn btn-primary m-4" (click)="createPost()" [disabled]="!heading || !subHeading || !content">Create Post</button>
+</div>  

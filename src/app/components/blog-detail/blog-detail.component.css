@@ -5,3 +5,11 @@ h6 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size : 25px;
 }
+
+figure {
+    display: block;
+}
+code {
+    padding : 10px;
+    background: rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,10 @@
+.container {
+    text-align: center;
+}
+.mat-form-field {
+    width: 80%;
+}
+.mat-form-field textarea {
+    min-height: 50vh;
+    overflow-y: scroll;
+}

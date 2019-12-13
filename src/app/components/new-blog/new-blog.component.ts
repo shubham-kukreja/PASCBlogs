@@ -3,6 +3,9 @@ import { BlogService } from '../../services/blog.service'
 import { Observable } from 'rxjs';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { finalize } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-new-blog',
@@ -12,11 +15,14 @@ import { finalize } from 'rxjs/operators';
 export class NewBlogComponent implements OnInit {
   heading : string;
   subHeading : string;
-  image : string = null;
-  content : string;
+  image : string = 'https://firebasestorage.googleapis.com/v0/b/pasc-blogs.appspot.com/o/posts%2Fdemo-detail.jpeg?alt=media&token=3ff60e63-8eef-4b67-bee5-089b0b7e83da';
+  content : string = null;
   uploadPer : Observable<number>
   downloadURL : Observable<string>
-  constructor(private blogService : BlogService, private storage : AngularFireStorage) { }
+  created : boolean;
+  category : string;
+  public Editor = ClassicEditor;
+  constructor(private blogService : BlogService, private storage : AngularFireStorage,public authService : AuthService) { }
 
   ngOnInit() {
   }
@@ -27,9 +33,18 @@ export class NewBlogComponent implements OnInit {
       heading : this.heading,
       subHeading : this.subHeading,
       image : this.image,
-      date : new Date().toISOString()
+      date : new Date().toISOString(),
+      category : this.category,
+      author : this.authService.authState.displayName,
+      approve : null,
+      id : null
     };
+    this.created = true;
     this.blogService.create(data)
+    setTimeout(() => {
+      this.created = false;
+      window.location.href = "/home"
+    }, 3000);
   }
   uploadImage(event)
   {
@@ -50,8 +65,7 @@ export class NewBlogComponent implements OnInit {
      )
     .subscribe()
       console.log('Image Uploaded');
-      console.log(task);
-      console.log(fileRef.getDownloadURL())
     }
   }
+  
 }

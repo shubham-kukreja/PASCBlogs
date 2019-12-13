@@ -3,6 +3,8 @@ import { Blog } from 'src/app/shared/blog';
 import { BlogService } from 'src/app/services/blog.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
+
 
 @Component({
   selector: 'app-blog-detail',
@@ -19,5 +21,14 @@ export class BlogDetailComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
     this.blog = this.blogService.getSelectedBlogFromFirestore(id).subscribe(data => this.blog = data);
+    console.log(id)
+    this.blogService.provideId(id);
   }
+  markCompleted(id : string) {
+    this.blogService.approve(id);
+  }
+  deleteBlog(id : string) {
+    this.blogService.delete(id);
+  }
+  
 }
