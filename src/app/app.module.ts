@@ -35,6 +35,8 @@ import { UploaderComponent } from './uploader/uploader.component';
 import { UploadTaskComponent } from './upload-task/upload-task.component';
 import { ViewGalleryComponent } from './view-gallery/view-gallery.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { HomeLandingComponent } from './components/home-landing/home-landing.component';
+import { MainAdminComponent } from './components/main-admin/main-admin.component';
 
 
 
@@ -55,7 +57,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     UploaderComponent,
     UploadTaskComponent,
     ViewGalleryComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    HomeLandingComponent,
+    MainAdminComponent
   ],
   imports: [
     BrowserModule,

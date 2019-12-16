@@ -31,7 +31,6 @@ export class BlogService {
       return changes.map(a => {
         const data = a.payload.doc.data() as Blog
         data.id = a.payload.doc.id;
-        console.log(data)
         return data;
       })
     }))
@@ -45,7 +44,6 @@ export class BlogService {
         
         if(!data.approve)
         {
-          console.log(data)
           return data;
         }
       })
@@ -71,15 +69,12 @@ export class BlogService {
   delete(id : string)
   {
     this.itemDoc = this.afs.doc<Blog>(`blogs/${id}`);
-    console.log(this.itemDoc)
     this.itemDoc.delete();
     this.router.navigate(['admin']);
   }
   provideId(id : string)
   {
-    console.log(id)
     this.itemDoc = this.afs.doc<Blog>('blogs/' + id);
     this.itemDoc.update({id : id})
-    console.log(this.itemDoc)
   }
 }

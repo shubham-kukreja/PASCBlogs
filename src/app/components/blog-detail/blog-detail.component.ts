@@ -21,7 +21,6 @@ export class BlogDetailComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
     this.blog = this.blogService.getSelectedBlogFromFirestore(id).subscribe(data => this.blog = data);
-    console.log(id)
     this.blogService.provideId(id);
   }
   markCompleted(id : string) {

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   firebase : {
-    apiKey: "---",
+    apiKey: "AIzaSyCL98Jbzx4xNf6j2XSBwTcFIyMv83F1GuE",
     authDomain: "pasc-blogs.firebaseapp.com",
     databaseURL: "https://pasc-blogs.firebaseio.com",
     projectId: "pasc-blogs",

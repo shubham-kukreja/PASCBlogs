@@ -107,21 +107,16 @@ export class AuthService {
     return this.afAuth.authState;
   }
   createUser(user) {
-    console.log(user);
     this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
 
       .then(async userCredential => {
         this.newUser = user;
         await this.afAuth.auth.currentUser.sendEmailVerification();
-        console.log(userCredential);
         userCredential.user.updateProfile({
           displayName: user.firstName + ' ' + user.lastName
         });
-
+        this.logout().then(() => this.router.navigate(['/login']) );
         this.insertUserData(userCredential)
-          .then(() => {
-            this.router.navigate(['/login']);
-          });
       })
       .catch(error => {
         this.eventAuthError.next(error);

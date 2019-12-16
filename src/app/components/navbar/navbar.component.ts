@@ -26,11 +26,8 @@ export class NavbarComponent implements OnInit {
         this.getCurrent()
       }
     })
-    console.log(this.User)
-     
   }
   getCurrent() {
     this.afs.doc(`users/${this.angularFireAuth.auth.currentUser.uid}`).valueChanges().subscribe(item => {this.currentUser = item})
-    console.log('Cuurent USer ', this.currentUser )
   }
 }

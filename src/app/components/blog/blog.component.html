@@ -1,16 +1,10 @@
-<div class="card mb-3" style="width: 100%;">
-    <div class="row no-gutters">
-        <div class="col-md-4">
-        <img src="{{blog.image}}" class="card-img" alt="...">
-        </div>
-        <div class="col-md-8">
-        <div class="card-body">
-            <h3 class="card-title">{{blog.heading}}</h3>
-            <h5 class="card-title text-muted">{{blog.subHeading}}</h5>
-            <p class="card-text text-muted">- {{blog.author}}</p>
-            <p class="card-text"><small class="text-muted">{{blog.date | date}}</small></p>
-
-        </div>
-        </div>
+    
+<div class="card">
+    <img src="{{blog.image}}" class="card-img-top" alt="..." [routerLink]="['/blogdetail', blog.id]" >
+    <div class="card-body">
+    <h5 class="card-title heading" [routerLink]="['/blogdetail', blog.id]">{{blog.heading | slice:0:57 }}...</h5>
+    <p class="card-text sub-heading">{{blog.subHeading | slice:0:75 }}...</p>
+    <p class="card-text author">- {{blog.author}}</p>
+    <p class="card-text date">{{blog.date | date}}</p>
     </div>
 </div>

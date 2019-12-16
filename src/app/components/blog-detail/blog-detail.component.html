@@ -1,14 +1,25 @@
 <div class="container" style="padding: 6rem;">
-    <h1>{{blog.heading}}</h1>
-    <h4 class="font-weight-light text-muted">{{blog.subHeading}}</h4>
-    
-    <div class="category">
-        <span class="badge badge-pill badge-primary ml-1 mr-1">{{blog.category}}</span>
-    </div>
-    <img src="{{blog.image}}" alt="" class="img-fluid">
-    <div class="lead e2e-trusted-url" [innerHTML]="blog.content | keepHtml"></div>
-    <div *ngIf="!blog.approve">
-        <button (click)="markCompleted(blog.id)">Accept</button>
-        <button (click)="deleteBlog(blog.id)">Delete</button>
-    </div>
+  <h1 class="heading">{{ blog.heading }}</h1>
+  <h4 class="font-weight-light text-muted">{{ blog.subHeading }}</h4>
+  <h4 class="font-weight-medium" style="margin: 10px 0;">
+    - {{ blog.author }}
+  </h4>
+  <div class="category">
+    <span class="badge badge-pill badge-primary ml-1 mr-1">{{
+      blog.category
+    }}</span>
+  </div>
+  <img src="{{ blog.image }}" alt="" class="img-fluid" />
+  <div class="lead e2e-trusted-url" [innerHTML]="blog.content | keepHtml"></div>
+  <div *ngIf="!blog.approve">
+    <button class="btn btn-primary m-2" (click)="markCompleted(blog.id)">
+      Accept
+    </button>
+    <button class="btn btn-danger m-2" (click)="deleteBlog(blog.id)">
+      Delete
+    </button>
+  </div>
+  <div [hidden]="blog" class="text-center">
+    <mat-spinner style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+  </div>
 </div>
