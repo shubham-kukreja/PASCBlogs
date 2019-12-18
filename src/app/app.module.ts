@@ -37,6 +37,12 @@ import { ViewGalleryComponent } from './view-gallery/view-gallery.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { HomeLandingComponent } from './components/home-landing/home-landing.component';
 import { MainAdminComponent } from './components/main-admin/main-admin.component';
+import { HomeComponent } from './components/home/home.component';
+import { EventsComponent } from './components/events/events.component';
+import { DomainsComponent } from './components/domains/domains.component';
+import { TeamComponent } from './components/team/team.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { MainNavbarComponent } from './components/main-navbar/main-navbar.component';
 
 
 
@@ -59,7 +65,13 @@ import { MainAdminComponent } from './components/main-admin/main-admin.component
     ViewGalleryComponent,
     ForgotPasswordComponent,
     HomeLandingComponent,
-    MainAdminComponent
+    MainAdminComponent,
+    HomeComponent,
+    EventsComponent,
+    DomainsComponent,
+    TeamComponent,
+    AboutusComponent,
+    MainNavbarComponent
   ],
   imports: [
     BrowserModule,

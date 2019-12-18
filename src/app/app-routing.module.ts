@@ -13,19 +13,28 @@ import { SignupComponent } from './components/signup/signup.component';
 import { UploaderComponent } from './uploader/uploader.component';
 import { ViewGalleryComponent } from './view-gallery/view-gallery.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { HomeComponent } from './components/home/home.component';
+import { EventsComponent } from './components/events/events.component';
+import { DomainsComponent } from './components/domains/domains.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
 
 const routes: Routes = [
-  {path : 'home', component : BlogListComponent },
+  {path : 'home', component : HomeComponent },
+  {path : 'events', component : EventsComponent },
+  {path : 'domains', component : DomainsComponent },
+  {path : 'team', component : BlogListComponent },
+  {path : 'aboutus', component : AboutusComponent },
+  {path : 'blogs', component : BlogListComponent },
   {path : 'blogdetail/:id', component : BlogDetailComponent},
   {path : 'new', component : NewBlogComponent, canActivate : [AuthGuard] },
-  {path : 'admin', component : AdminComponent, canActivate : [AuthGuard]},
+  {path : 'reviewblogs', component : AdminComponent, canActivate : [AuthGuard]},
   {path : 'profile', component : ProfileComponent, canActivate : [AuthGuard]}, 
   {path : 'uploadGallery', component : UploaderComponent, canActivate : [AuthGuard]},
   {path : 'gallery', component : ViewGalleryComponent, canActivate : [AuthGuard]},
   {path : 'login', component : LoginComponent, canActivate : [SecureInnerPagesGuard]},
   {path : 'forgot', component : ForgotPasswordComponent, canActivate : [SecureInnerPagesGuard]},
   {path : 'signup', component : SignupComponent, canActivate : [SecureInnerPagesGuard]},
-  {path : '', redirectTo: '/home', pathMatch: 'full' }
+  {path : '', redirectTo: '/blogs', pathMatch: 'full' }
 ];
 
 @NgModule({

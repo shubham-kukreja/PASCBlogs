@@ -70,7 +70,7 @@ export class BlogService {
   {
     this.itemDoc = this.afs.doc<Blog>(`blogs/${id}`);
     this.itemDoc.delete();
-    this.router.navigate(['admin']);
+    this.router.navigate(['reviewblogs']);
   }
   provideId(id : string)
   {

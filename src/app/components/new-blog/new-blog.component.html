@@ -1,5 +1,11 @@
 
-<div class="container">
+<div class="container" style="margin-top:100px ;">
+  <div>
+    <input type="file" name="file" id="file" class="btn" (change)= "uploadImage($event)" required>
+    <div [hidden]="!uploadPer">
+      <mat-progress-bar mode="determinate" value="{{uploadPer | async}}"></mat-progress-bar>
+    </div>
+  </div>
 <mat-form-field>
     <input matInput placeholder="Post Title" [(ngModel)]="heading" class="input-field">
   </mat-form-field>
@@ -14,12 +20,7 @@
 <br>
   <ckeditor [editor]="Editor" [(ngModel)]="content" data="<p>Hello, world!</p>"  tagName="textarea"  [config]="{ toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedlist', 'numberedlist', 'blockquote', 'inserttable', 'undo', 'redo' ] }" ></ckeditor>  
 <br>
-<div>
-  <input type="file" name="file" id="file" class="btn" (change)= "uploadImage($event)">
-  <div [hidden]="!uploadPer">
-    <mat-progress-bar mode="determinate" value="{{uploadPer | async}}"></mat-progress-bar>
-  </div>
-</div>
+
 <div [hidden]="!created">
   <mat-spinner></mat-spinner>
 </div>

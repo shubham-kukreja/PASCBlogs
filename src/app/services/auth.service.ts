@@ -51,7 +51,7 @@ export class AuthService {
     try {
       const result = await this.afAuth.auth.signInWithPopup(provider);
       this.ngZone.run(() => {
-        this.router.navigate(['home']);
+        this.router.navigate(['blogs']);
       });
       this.SetUserData(result.user);
     }
@@ -96,7 +96,7 @@ export class AuthService {
       })
       .then(userCredential => {
         if (userCredential && userCredential.user.emailVerified) {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/blogs']);
         }
         else {
           window.alert("Verify Email");

@@ -18,10 +18,10 @@ export class HomeLandingComponent implements OnInit {
   s.type = "text/javascript";
   s.src = "../../../assets/scripts/type.js";
   this.elementRef.nativeElement.appendChild(s);
-  var s2 = document.createElement("script");
-  s2.type = "text/javascript";
-  s2.src = "../../../assets/scripts/topology.js";
-  this.elementRef.nativeElement.appendChild(s2);
+  // var s2 = document.createElement("script");
+  // s2.type = "text/javascript";
+  // s2.src = "../../../assets/scripts/topology.js";
+  // this.elementRef.nativeElement.appendChild(s2);
   }
 
 }

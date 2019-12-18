@@ -1,0 +1,137 @@
+.first {
+  position: relative;
+}
+
+.second {
+  position: relative;
+  top: -30px;
+  width: 90%;
+  z-index: 2px;
+  align-self: center;
+  transition: width 0.2s;
+}
+
+.second:hover {
+  width: 100%;
+}
+
+.cf1 {
+  padding-right: 6%;
+  padding-left: 6%;
+}
+.cf2 {
+  padding-right: 9%;
+  padding-left: 9%;
+}
+
+.card-img,
+.card-img-top {
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: -30px;
+}
+
+.card-img {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: auto;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-text {
+  color: #6b6464;
+  padding-bottom: 20px;
+}
+
+.card-title {
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+  background-color: rgba(18, 19, 47);
+  color: floralwhite;
+  border-radius: 0px;
+}
+
+h4:after {
+  display: block;
+  height: 2px;
+  background-color: #2da1b1;
+  content: " ";
+  width: 30px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+h2:after {
+  display: block;
+  height: 3px;
+
+  content: " ";
+  width: 85px;
+  margin: 0 auto;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+.line-up {
+  margin-top: 20px;
+  height: 3px;
+  background-color: #2da1b1;
+  content: " ";
+  width: 30%;
+  margin: 0px auto;
+  margin-top: 5px;
+  align-self: right;
+}
+
+#gmap_canvas {
+  border-radius: 10px;
+
+  align-self: center;
+  height: 270px;
+  width: 100%;
+}
+
+.map {
+  margin-top: 14%;
+  align-self: center;
+}
+
+.org {
+  color: #2da1b1;
+  margin-bottom: 50px;
+}
+
+.contact-hero {
+  position: absolute;
+  z-index: -1;
+  width: 70%;
+  left: 10%;
+  padding-top: -10px;
+}
+
+.contact-ico {
+  background: -webkit-linear-gradient(#00e4ff, rgb(9, 84, 146));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+  background: -webkit-linear-gradient(#00e4ff, rgb(9, 84, 146));
+}
+
+.prefix {
+  position: relative;
+  width: 3rem;
+  font-size: 2rem;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  transition: color 0.2s;
+}

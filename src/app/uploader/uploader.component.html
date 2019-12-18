@@ -1,16 +1,18 @@
-<div class="dropzone" 
-     dropzone
-     (hovered)="toggleHover($event)"
-     (dropped)="onDrop($event)"
-     [class.hovering]="isHovering">
+<div class="container" style="margin: 100px;">
+  <div
+    class="dropzone"
+    dropzone
+    (hovered)="toggleHover($event)"
+    (dropped)="onDrop($event)"
+    [class.hovering]="isHovering"
+  >
+    <h3>AngularFire Drop Zone</h3>
+    <p>Drag and Drop a File</p>
+  </div>
 
+  <h3>Uploads</h3>
 
-     <h3>AngularFire Drop Zone</h3>
-     <p>Drag and Drop a File</p>
-</div>
-
-<h3>Uploads</h3>
-
-<div *ngFor="let file of files">
-  <upload-task [file]="file"></upload-task>
+  <div *ngFor="let file of files">
+    <upload-task [file]="file"></upload-task>
+  </div>
 </div>

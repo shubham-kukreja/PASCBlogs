@@ -43,7 +43,7 @@ export class NewBlogComponent implements OnInit {
     this.blogService.create(data)
     setTimeout(() => {
       this.created = false;
-      window.location.href = "/home"
+      window.location.href = "/blogs"
     }, 3000);
   }
   uploadImage(event)

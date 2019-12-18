@@ -1,44 +1,94 @@
-<div class="formGroup">
+
+  <!-- <div class="formGroup">
     <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-        <i class="fab fa-google-plus-g"></i>
-        Log in with Google
+      <i class="fab fa-google-plus-g"></i>
+      Log in with Google
     </button>
+  </div> -->
+<!-- 
+  <div class="row">
+    <div class="col-12">
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+        <div class="row" *ngIf="authError">
+          <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <label for="email">Email</label>
+            <input ngModel #email="ngModel" name="email" type="email" class="form-control">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <label for="password">Password</label>
+            <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-12">
+            <a href="/signup">Click here to register</a>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Login</button>
+          </div>
+          <div class="col-12">
+            <button> <span class="redirect" routerLink="/forgot">Forgot Password</span> </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>  -->
+
+
+  <div class=" back ">
+    <div class="justify-content-center">
+    <div class="container">
+     
+    <div class=" row ">
+      <div class="col-lg-4 " ></div>
+      <div class="col-12 col-lg-4 ">
+  <div class="card login-box">
+    <img src="../../../assets/images/avc/avatar.png" class="avatar">
+        <h1>Login Here</h1>
+            <form  #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+              
+              <div >
+                <label for="email">Email</label>
+                <input ngModel #email="ngModel" name="email" type="email" class="form-control">
+          </div>
+
+          <div>
+            <label for="password">Password</label>
+            <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+          </div>
+
+            <input type="submit" name="submit" value="Login" [disabled]="clicke" (click)=" clicked = true;">
+
+            <div class="forgot">
+            <a ><span class="redirect" routerLink="/forgot">Forgot Password</span></a>  
+            <br><br>
+            <p class="para"> Or</p> <br>
+            <button type="button" class="btn " (click)="authService.GoogleAuth()">
+              <!-- <i class="fab fa-google"></i>  -->
+              Log in with Google
+            </button>  
+          </div>
+
+            </form>
+        
+        
+        </div>
+        </div>
+
+      </div>
+    </div>
+
 </div>
-<div class="row">
-  <div class="col-12">
-    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-
-      <div class="row" *ngIf="authError">
-        <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <label for="email">Email</label>
-          <input ngModel #email="ngModel" name="email" type="email" class="form-control">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <label for="password">Password</label>
-          <input ngModel #password="ngModel" name="password" type="password" class="form-control">
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-12">
-          <a href="/signup">Click here to register</a>
-        </div>
-
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Login</button>
-        </div>
-        <div class="col-12">
-         <button> <span class="redirect" routerLink="/forgot">Forgot Password</span> </button>       
-        </div>
-      </div>
-
-    </form>
-  </div>
 </div>
+

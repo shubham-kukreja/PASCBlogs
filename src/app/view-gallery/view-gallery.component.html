@@ -1,10 +1,36 @@
-<div class="container">
+<!-- <div class="container">
         <div *ngIf="items">
             <div *ngFor="let item of items"  class="blog-item">
-                <img src="{{item.downloadURL}}" alt="">
+                <img src="{{item.downloadURL  }}" alt="">
             </div>
         </div>
 <div [hidden]="items" class="text-center">
     <mat-spinner></mat-spinner>
 </div>
-</div>
+</div> -->
+
+
+<br><br><br><br>
+
+
+
+
+
+<div class="photo-gallery">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Lightbox Gallery</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+        </div>
+      
+        <div class="row photos " >
+
+            <ng-container *ngFor="let item of items" >
+            
+                
+                    <div class="col-sm-6 col-md-4  item fix"><a href="{{item.downloadURL  }}" data-lightbox="photos"><img class="img-fluid" src="{{item.downloadURL  }}"></a></div>
+                
+              </ng-container>
+                   
+    </div>
+</div></div>
