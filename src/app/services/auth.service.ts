@@ -7,6 +7,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { Router } from "@angular/router";
 import { BehaviorSubject } from 'rxjs'
 import * as firebase from 'firebase/app';
+import { async } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class AuthService {
   private eventAuthError = new BehaviorSubject<string>("");
   eventAuthError$ = this.eventAuthError.asObservable();
   newUser: any;
-
+log:any;
 
   constructor(
     public afs: AngularFirestore,   // Inject Firestore service
@@ -51,7 +52,7 @@ export class AuthService {
     try {
       const result = await this.afAuth.auth.signInWithPopup(provider);
       this.ngZone.run(() => {
-        this.router.navigate(['blogs']);
+        this.router.navigate(['home']);
       });
       this.SetUserData(result.user);
     }
@@ -89,23 +90,32 @@ export class AuthService {
     return (user !== null) ? true : false;
   }
   // Testing
-  async login(email: string, password: string) {
+  login(email: string, password: string) {
+    this.log=true;
     this.afAuth.auth.signInWithEmailAndPassword(email, password)
-      .catch(error => {
+      .catch(async error => {
         this.eventAuthError.next(error);
+        window.alert(error);
+        this.log=false;
       })
-      .then(userCredential => {
+      .then(async userCredential => {
         if (userCredential && userCredential.user.emailVerified) {
-          this.router.navigate(['/blogs']);
+          this.router.navigate(['/home']);
         }
         else {
-          window.alert("Verify Email");
+          if( this.log){
+            window.alert("Verify Email");
+            this.logout().then(() => this.router.navigate(['/login']) );
+          }
+          
+ 
         }
       })
   }
   getUserState() {
     return this.afAuth.authState;
   }
+  
   createUser(user) {
     this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
 
@@ -120,6 +130,7 @@ export class AuthService {
       })
       .catch(error => {
         this.eventAuthError.next(error);
+        window.alert(error);
       });
   }
   async ForgotPassword(passwordResetEmail) {

@@ -30,7 +30,7 @@ const routes: Routes = [
   {path : 'reviewblogs', component : AdminComponent, canActivate : [AuthGuard]},
   {path : 'profile', component : ProfileComponent, canActivate : [AuthGuard]}, 
   {path : 'uploadGallery', component : UploaderComponent, canActivate : [AuthGuard]},
-  {path : 'gallery', component : ViewGalleryComponent, canActivate : [AuthGuard]},
+  {path : 'gallery', component : ViewGalleryComponent },
   {path : 'login', component : LoginComponent, canActivate : [SecureInnerPagesGuard]},
   {path : 'forgot', component : ForgotPasswordComponent, canActivate : [SecureInnerPagesGuard]},
   {path : 'signup', component : SignupComponent, canActivate : [SecureInnerPagesGuard]},

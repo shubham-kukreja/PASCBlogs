@@ -1,6 +1,6 @@
     
-<div class="card">
-    <img src="{{blog.image}}" class="card-img-top" alt="..." [routerLink]="['/blogdetail', blog.id]" >
+<div class="card" [routerLink]="['/blogdetail', blog.id]" >
+    <img src="{{blog.image}}" class="card-img-top" alt="..." >
     <div class="card-body">
     <h5 class="card-title heading" [routerLink]="['/blogdetail', blog.id]">{{blog.heading | slice:0:57 }}...</h5>
     <p class="card-text sub-heading">{{blog.subHeading | slice:0:75 }}...</p>

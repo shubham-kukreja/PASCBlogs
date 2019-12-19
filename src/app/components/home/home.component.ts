@@ -16,6 +16,12 @@ export class HomeComponent implements OnInit {
     s.src = "../../../assets/scripts/AOS.js";
     this.elementRef.nativeElement.appendChild(s);
 
+    var s1 = document.createElement("script");
+    s1.type = "text/javascript";
+    s1.src = "../../../assets/scripts/slideshow.js";
+    this.elementRef.nativeElement.appendChild(s1);
+
+
     $(window).scroll(function() {
       $(".button").css("opacity", 0 + $(window).scrollTop() / 1000);
     });

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+
 body {
     overflow-x: hidden;
 }
@@ -70,7 +72,7 @@ body {
     font-size: 1.4rem;
     font-weight: normal;
     font-family: 'Times New Roman', Times, serif;
-}@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+}
 * {
   box-sizing: border-box;
 }
