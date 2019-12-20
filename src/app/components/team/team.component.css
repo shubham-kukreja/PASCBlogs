@@ -1,0 +1,240 @@
+h1, h2, h3, h4, h5, h6 {
+}
+#part {
+  position: fixed;
+  width: auto;
+  z-index: 0;
+  height: 102vh;
+  top: -15px;
+}
+
+
+#heading{
+    margin-top: 80px;
+  }
+  
+  .hdAndText{
+      padding: 0 100px; 
+  }
+  
+  .hdAndText .h1text {
+      font-size: 5vw;
+      color: #003a78;
+      line-height: 1.2;
+      letter-spacing: 0;
+      font-weight: 550;
+      /* margin-bottom: 50px */
+      font-family: "Open Sans",sans-serif;
+  }
+  
+  @media screen and (max-width: 900px)
+  {
+    .hdAndText{
+      padding: 0 10%;
+    }
+    .hdAndText .h1text {
+    font-size: 4rem;
+    } 
+  } 
+  
+  .yellow_line{
+    content: "";
+    position: relative;
+    bottom: 0px;
+    top: -15px;
+    left: 0;
+    right: 0px;
+    height: 10px;
+    width: 10%;
+    background-color: rgb(253, 184, 17);
+    z-index: 1;
+    margin-bottom: 5%;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-heading h2 {
+  color: White;
+  display: block;
+  font-family: 'xscale';
+  font-weight: 1500;
+  font-size: 75px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.site-heading h2 span {
+  font-family: 'xscale';
+  font-size: 75px;
+  color: White;
+}
+
+.site-heading h4 {
+color: White;
+  display: inline-block;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+  z-index: 1;
+}
+
+.site-heading h4::before {
+  background: #66ffff none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 50%;
+  margin-left: -25px;
+  position: absolute;
+  width: 50px;
+}
+
+.site-heading h2 span {
+  color: #66ffff;
+}
+
+.site-heading {
+  margin-bottom: 60px;
+  overflow: hidden;
+  margin-top: -5px;
+}
+
+.team-area .single-item {
+  margin-bottom: 30px;
+}
+
+.team-area .item .thumb {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+
+.team-area .item .thumb img {
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+
+
+.team-area .item .thumb .social li {
+  display: inline-block;
+}
+
+.team-area .item .thumb .social li a {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 2px;
+  text-align: center;
+  width: 40px;
+}
+
+.team-area .info {
+  background: #ffffff none repeat scroll 0 0;
+  -moz-box-shadow: 0 0 10px #cccccc;
+  -webkit-box-shadow: 0 0 10px #cccccc;
+  -o-box-shadow: 0 0 10px #cccccc;
+  box-shadow: 0 0 10px #cccccc;
+  padding: 40px 20px 20px;
+  position: relative;
+  text-align: center;
+  z-index: 9;
+}
+
+.team-area .info .message {
+  height: 50px;
+  line-height: 40px;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 50px;
+}
+
+.team-area .info .message a {
+  background: #fff none repeat scroll 0 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 0 10px #cccccc;
+  -webkit-box-shadow: 0 0 10px #cccccc;
+  -o-box-shadow: 0 0 10px #cccccc;
+  box-shadow: 0 0 10px #cccccc;
+  box-sizing: border-box;
+  color: #1ab7ea;
+  display: inline-block;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+}
+
+.team-area .info .message a i {
+  font-weight: 500;
+}
+
+.team-area .info h4 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.img-council{
+  width: 100%;
+  height: auto;
+}
+
+.team-area .info span {
+  color:#18a1fc;
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.team-area .social li.github a {
+  background-color: black;
+}
+.team-area .social li.facebook a {
+  background-color: #3b5998;
+}
+.team-area .social li.linkedin a {
+  background-color: #1ab7ea;
+}
+
+#particles-js
+  {
+    width:100%;
+    height:auto;
+    overflow-x:hidden;
+  }
+
+@media screen and (max-width:600px)
+{
+  #particles-js
+  {
+    background-size:cover;
+    background-position:center;
+  }
+}
+.particles-js-canvas-el{
+position: fixed; top: 0; right: 0; bottom: 0; left: 0;}

@@ -15,14 +15,14 @@ export class MainNavbarComponent implements OnInit {
 
    
 
-  //   $(window).scroll(function(){
-  //     var scroll = $(window).scrollTop();
-  //     if(scroll < 765){
-  //         $('.fixed-top').css({'background': 'transparent' ,'box-shadow' : 'none'});
-  //     } else{
-  //         $('.fixed-top').css({'background-color': '#fff' , 'box-shadow' : '0px 1px 10px #999'});
-  //     }
-  // });
+    $(window).scroll(function(){
+      var scroll = $(window).scrollTop();
+      if(scroll < 50){
+          $('.fixed-top').css({'box-shadow' : 'none'});
+      } else{
+          $('.fixed-top').css({'box-shadow' : '0px 1px 10px #999'});
+      }
+  });
 
 
 

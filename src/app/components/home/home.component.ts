@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
 
     $(window).scroll(function() {
-      $(".button").css("opacity", 0 + $(window).scrollTop() / 1000);
+      $(".button").css("opacity", 0 + $(window).scrollTop() / 500);
     });
     $(window).scroll(function() {
       $(".home-footer").css("opacity", 1 - $(window).scrollTop() / 300);

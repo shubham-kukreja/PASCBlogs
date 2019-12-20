@@ -17,12 +17,14 @@ import { HomeComponent } from './components/home/home.component';
 import { EventsComponent } from './components/events/events.component';
 import { DomainsComponent } from './components/domains/domains.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { TeamComponent } from './components/team/team.component';
+
 
 const routes: Routes = [
   {path : 'home', component : HomeComponent },
   {path : 'events', component : EventsComponent },
   {path : 'domains', component : DomainsComponent },
-  {path : 'team', component : BlogListComponent },
+  {path : 'team', component : TeamComponent },
   {path : 'aboutus', component : AboutusComponent },
   {path : 'blogs', component : BlogListComponent },
   {path : 'blogdetail/:id', component : BlogDetailComponent},
