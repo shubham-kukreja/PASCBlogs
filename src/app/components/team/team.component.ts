@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-team',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  constructor(private elementRef:ElementRef) { }
 
   ngOnInit() {
+    var s = document.createElement("script");
+  s.type = "text/javascript";
+  s.src = "../../../assets/scripts/AOS.js";
+  this.elementRef.nativeElement.appendChild(s);
   }
 
 }

@@ -159,6 +159,7 @@ color: White;
   position: relative;
   text-align: center;
   z-index: 9;
+  border-radius: 0 0 25px 25px
 }
 
 .team-area .info .message {
@@ -203,6 +204,7 @@ color: White;
 .img-council{
   width: 100%;
   height: auto;
+  border-radius: 25px;
 }
 
 .team-area .info span {

@@ -113,7 +113,32 @@ h3 {
     
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
     font-weight: normal;
-    font-family: 'Times New Roman', Times, serif;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5%;
+    margin-bottom: 5%;
+    line-height: 1.6;
+}
+.org{
+    color:black;
+    margin: 0 20px 50px 20px;
+    font-size: 1.4rem;
+    padding: 10px;
+    
+    
+}
+
+@media screen and (max-width: 600px)
+{
+    .org{
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        margin: 0;
+    }
+    .intro{
+        line-height: 1.2;
+        padding: 7% 5%;
+    }
 }
 
 .img-responsive{
@@ -382,14 +407,7 @@ a:not([href]):hover {
     top: -32px;
 }
 
-.org{
-    color:black;
-    margin-bottom: 50px;
-    font-size: 1.4rem;
-    padding: 10px;
-    
-    
-}
+
 .material-card.Indigo h2 {
     background-color: #3f51b5;
 }

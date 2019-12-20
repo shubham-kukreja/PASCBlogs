@@ -62,14 +62,15 @@ body {
    
     /* height: 100%; */
     position: relative;
-    top: 20%;
+    top: 10%;
     width: 100%;
+    padding: 10%;
     
 }
 
 .myheading{
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 .mycontainer{
     margin: auto 100px;
@@ -301,4 +302,9 @@ body {
     height: 11px;
     width: 30px;
   }
+}
+
+.p-8{
+  padding: 6%;
+  margin-bottom: 5%;
 }
