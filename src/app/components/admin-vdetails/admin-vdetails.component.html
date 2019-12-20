@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light bg-info">
+    <span class="navbar-brand mb-0 h1">Admin Panel</span>
+  </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<div class="card">
+    <div class="card-header">
+      Event
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"> {{item.topic}} </h5>
+      <p class="card-text"> {{item.description}} </p>
+      <p class="card-text"> {{item.venue}} </p>
+      <p class="card-text"> {{item.date.toDate() | date }} </p>
+      <button mat-raised-button class="delete-button" color="warn" type="delete" (click) = delete()>Delete</button>
+    </div>
+  </div>
+</div>

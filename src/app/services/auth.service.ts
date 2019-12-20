@@ -112,6 +112,34 @@ log:any;
         }
       })
   }
+
+
+  adminlogin(email: string, password: string) {
+    this.log=true;
+    this.afAuth.auth.signInWithEmailAndPassword(email, password)
+      .catch(async error => {
+        this.eventAuthError.next(error);
+        window.alert(error);
+        this.log=false;
+      })
+      .then(async userCredential => {
+        if (userCredential && userCredential.user.emailVerified ) {
+          this.router.navigate(['/adminPanel']);
+        }
+
+        else {
+          if( this.log){
+            window.alert("Verify Email");
+            this.logout().then(() => this.router.navigate(['/home']) );
+          }
+          
+        }
+      })
+  }
+
+
+
+
   getUserState() {
     return this.afAuth.authState;
   }
@@ -149,8 +177,13 @@ log:any;
       admin : false
     })
   }
+
   logout() {
     return this.afAuth.auth.signOut();
+  }
+
+  adminlogout() {
+    this.logout().then(() => this.router.navigate(['/home']) );
   }
   
 }

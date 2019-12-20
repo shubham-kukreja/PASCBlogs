@@ -1,0 +1,38 @@
+
+  <div class=" back ">  
+    <div class="justify-content-center">
+    <div class="container">
+     
+    <div class=" row ">
+      <div class="col-lg-4 " ></div>
+      <div class="col-12 col-lg-4 ">
+  <div class="card login-box">
+    <img src="../../../assets/images/avc/avatar.png" class="avatar">
+        <h1>Login Here</h1>
+            <form  #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+              
+              <div >
+                <label for="email">Email</label>
+                <input ngModel #email="ngModel" name="email" type="email" class="form-control">
+          </div>
+
+          <div>
+            <label for="password">Password</label>
+            <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+          </div>
+
+            <input type="submit" name="submit" value="Login" >
+
+          
+
+            </form>
+        
+        
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+</div> 

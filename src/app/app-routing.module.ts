@@ -18,6 +18,14 @@ import { EventsComponent } from './components/events/events.component';
 import { DomainsComponent } from './components/domains/domains.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { TeamComponent } from './components/team/team.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { AdminInnerGuard } from './guard/admin-inner.guard';
+import { MainAdminComponent } from './components/main-admin/main-admin.component';
+import { AdminEventsComponent } from './components/admin-events/admin-events.component';
+import { AdminViewComponent } from './components/admin-view/admin-view.component';
+import { AdminVdetailsComponent } from './components/admin-vdetails/admin-vdetails.component';
+
 
 
 const routes: Routes = [
@@ -36,6 +44,13 @@ const routes: Routes = [
   {path : 'login', component : LoginComponent, canActivate : [SecureInnerPagesGuard]},
   {path : 'forgot', component : ForgotPasswordComponent, canActivate : [SecureInnerPagesGuard]},
   {path : 'signup', component : SignupComponent, canActivate : [SecureInnerPagesGuard]},
+  {path : 'admin', component : AdminLoginComponent, canActivate : [AdminInnerGuard]},
+  {path : 'adminPanel', component : AdminPanelComponent, canActivate : [ AuthGuard ]},
+  {path : 'adminEvents', component : AdminEventsComponent, canActivate : [ AuthGuard ]},
+  {path : 'adminView', component : AdminViewComponent, canActivate : [ AuthGuard ]},
+  {path : 'adminDetails/:id' , component : AdminVdetailsComponent, canActivate : [ AuthGuard ]},
+
+
   {path : '', redirectTo: '/blogs', pathMatch: 'full' }
 ];
 

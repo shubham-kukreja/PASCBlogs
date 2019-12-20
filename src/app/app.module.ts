@@ -15,10 +15,8 @@ import {AngularFirestoreModule } from 'angularfire2/firestore'
 import { BlogService } from './services/blog.service';
 import { NewBlogComponent } from './components/new-blog/new-blog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { MatButtonModule } from '@angular/material/button'
-import { MatInputModule } from '@angular/material/input'
-import { FormsModule } from '@angular/forms'
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import {MatChipsModule} from '@angular/material/chips';
@@ -43,6 +41,17 @@ import { DomainsComponent } from './components/domains/domains.component';
 import { TeamComponent } from './components/team/team.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { MainNavbarComponent } from './components/main-navbar/main-navbar.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { AdminEventsComponent } from './components/admin-events/admin-events.component';
+
+
+import {MatButtonModule, MatInputModule, MatSliderModule, MatDialogModule } from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
+import { AdminViewComponent } from './components/admin-view/admin-view.component';
+import { AdminVdetailsComponent } from './components/admin-vdetails/admin-vdetails.component';
 
 
 
@@ -71,7 +80,12 @@ import { MainNavbarComponent } from './components/main-navbar/main-navbar.compon
     DomainsComponent,
     TeamComponent,
     AboutusComponent,
-    MainNavbarComponent
+    MainNavbarComponent,
+    AdminPanelComponent,
+    AdminLoginComponent,
+    AdminEventsComponent,
+    AdminViewComponent,
+    AdminVdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +104,12 @@ import { MainNavbarComponent } from './components/main-navbar/main-navbar.compon
     MatChipsModule,
     MatProgressSpinnerModule,
     CKEditorModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ReactiveFormsModule, FormsModule,BrowserAnimationsModule,
+    MatButtonModule, MatInputModule, MatSliderModule, MatDialogModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [
 

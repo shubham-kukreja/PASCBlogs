@@ -1,0 +1,57 @@
+<br><br><br><br>
+
+<div *ngIf="currentUser.admin">
+<nav class="navbar navbar-light bg-info">
+    <span class="navbar-brand mb-0 h1">Admin Panel</span>
+    <span class="nav-item" (click)="authService.adminlogout()">
+        <a class="nav-link" style="cursor: pointer;">Log out</a>
+    </span>
+  </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<div class="card m-5" style="width:400px">
+  <img class="card-img-top" src="../../assets/undraw_online_article_kr64.png" alt="Card image" style="width:100%">
+  <div class="card-body">
+    <h4 class="card-title">Blogs</h4>
+    <p class="card-text">To Approve or Delete blogs</p>
+    <a  class="btn btn-primary" routerLink = '/reviewblogs' > Blogs</a>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card m-5" style="width:400px">
+        <img class="card-img-top" src="../../assets/undraw_dev_productivity_umsq.png" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Events</h4>
+          <p class="card-text">To add or delete events </p>
+          <a  class="btn btn-primary" routerLink = '/adminView' style="margin-right: 10px;"> See Events </a>
+          <a  class="btn btn-primary" routerLink = '/adminEvents' > Add Events </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card m-5" style="width:400px">
+            <img class="card-img-top" src="../../assets/undraw_online_article_kr64.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Gallery</h4>
+              <p class="card-text">To add or delete photos</p>
+              <a class="btn btn-primary" routerLink='/uploadGallery' >Gallery</a>
+            </div>
+          </div>
+</div>              
+ </div>
+</div>
+          
+</div>
+
+<div *ngIf="!currentUser.admin" >
+<br><br>
+You have no Access
+
+</div>

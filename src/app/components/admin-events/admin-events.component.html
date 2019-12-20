@@ -1,0 +1,71 @@
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<nav class="navbar navbar-light bg-info">
+    <span class="navbar-brand mb-0 h1">Admin Panel</span>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <div class="container justify-content-center">
+     
+  
+          <form class="create-form" [formGroup]="exampleForm" novalidate (ngSubmit)="onSubmit(exampleForm.value)">
+  
+            <div class="form-group">
+              <mat-form-field class="input-style">
+                <input matInput placeholder="topic" class="form-control" formControlName="topic" required>
+              </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.topic">
+                <mat-error *ngIf="exampleForm.get('topic').hasError(validation.type) && (exampleForm.get('topic').dirty || exampleForm.get('topic').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+  
+            <div class="form-group">
+              <mat-form-field class="input-style">
+                <input matInput placeholder="description" class="form-control" formControlName="description" required>
+              </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.description">
+                <mat-error *ngIf="exampleForm.get('description').hasError(validation.type) && (exampleForm.get('description').dirty || exampleForm.get('description').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+  
+            <div class="form-group">
+              <!-- <mat-form-field class="input-style">
+                <input matInput placeholder="date" class="form-control" formControlName="date" required>
+              </mat-form-field> -->
+              <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date" required>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.date">
+                <mat-error *ngIf="exampleForm.get('date').hasError(validation.type) && (exampleForm.get('date').dirty || exampleForm.get('date').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+  
+            <div class="form-group">
+              <mat-form-field class="input-style">
+                <input matInput placeholder="venue" class="form-control" formControlName="venue" required>
+              </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.venue">
+                <mat-error *ngIf="exampleForm.get('venue').hasError(validation.type) && (exampleForm.get('venue').dirty || exampleForm.get('venue').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+  
+            <div class="row submit-button-container">
+              <div class="col-md-4">
+                <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!exampleForm.valid">Create</button>
+              </div>
+            </div>
+  
+          </form>
+      
+  
+  </div>
