@@ -53,6 +53,7 @@ import { MatNativeDateModule } from '@angular/material';
 import { AdminViewComponent } from './components/admin-view/admin-view.component';
 import { AdminVdetailsComponent } from './components/admin-vdetails/admin-vdetails.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { TableComponent } from './components/table/table.component';
 
 
 
@@ -87,7 +88,8 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     AdminEventsComponent,
     AdminViewComponent,
     AdminVdetailsComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

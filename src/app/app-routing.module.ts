@@ -26,6 +26,7 @@ import { AdminEventsComponent } from './components/admin-events/admin-events.com
 import { AdminViewComponent } from './components/admin-view/admin-view.component';
 import { AdminVdetailsComponent } from './components/admin-vdetails/admin-vdetails.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import {TableComponent} from './components/table/table.component';
 
 
 
@@ -50,6 +51,7 @@ const routes: Routes = [
   {path : 'adminPanel', component : AdminPanelComponent, canActivate : [ AuthGuard ]},
   {path : 'adminEvents', component : AdminEventsComponent, canActivate : [ AuthGuard ]},
   {path : 'adminView', component : AdminViewComponent, canActivate : [ AuthGuard ]},
+  {path: 'table', component: TableComponent, canActivate: [AuthGuard]},
   {path : 'adminDetails/:id' , component : AdminVdetailsComponent, canActivate : [ AuthGuard ]},
 
 

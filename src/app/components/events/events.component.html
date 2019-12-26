@@ -18,97 +18,14 @@
           <th scope="col">Details</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody  *ngFor = "let item of items"> 
         <tr>
-          <th scope="row">1</th>
-          <td>SIG</td>
-          <td>50</td>
-          <td>link</td>
+          <th scope="row"> {{item.date | date}} </th>
+          <td> {{item.activity}} </td>
+          <td> {{item.attendees}} </td>
+          <td> {{item.details}} </td>
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>SIG</td>
-          <td>60</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Web SIG</td>
-          <td>70</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>SIG</td>
-          <td>50</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>SIG</td>
-          <td>60</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Web SIG</td>
-          <td>70</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>SIG</td>
-          <td>50</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>SIG</td>
-          <td>60</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Web SIG</td>
-          <td>70</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>SIG</td>
-          <td>50</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>SIG</td>
-          <td>60</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Web SIG</td>
-          <td>70</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>SIG</td>
-          <td>50</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>SIG</td>
-          <td>60</td>
-          <td>link</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Web SIG</td>
-          <td>70</td>
-          <td>link</td>
-        </tr>
+
       </tbody>
     </table>
     </div>

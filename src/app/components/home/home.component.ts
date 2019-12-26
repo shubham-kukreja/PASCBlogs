@@ -71,7 +71,7 @@ export class HomeComponent implements OnInit {
         console.log(item);
         this.items.push(item);
       }) 
-      console.log(this.items);
+      
     
     })
   }

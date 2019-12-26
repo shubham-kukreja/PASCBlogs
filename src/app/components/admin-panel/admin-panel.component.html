@@ -1,6 +1,6 @@
 <br><br><br><br>
 
-<div *ngIf="currentUser.admin">
+
 <nav class="navbar navbar-light bg-info">
     <span class="navbar-brand mb-0 h1">Admin Panel</span>
     <span class="nav-item" (click)="authService.adminlogout()">
@@ -15,7 +15,7 @@
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-4">
-<div class="card m-5" style="width:400px">
+<div class="card m-3" style="width:400px">
   <img class="card-img-top" src="../../assets/undraw_online_article_kr64.png" alt="Card image" style="width:100%">
   <div class="card-body">
     <h4 class="card-title">Blogs</h4>
@@ -25,7 +25,7 @@
 </div>
 </div>
 <div class="col-md-4">
-<div class="card m-5" style="width:400px">
+<div class="card m-3" style="width:400px">
         <img class="card-img-top" src="../../assets/undraw_dev_productivity_umsq.png" alt="Card image" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">Events</h4>
@@ -36,8 +36,8 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card m-5" style="width:400px">
-            <img class="card-img-top" src="../../assets/undraw_online_article_kr64.png" alt="Card image" style="width:100%">
+      <div class="card m-3" style="width:400px">
+            <img class="card-img-top" src="../../../assets/undraw_camera_mg5h.png" alt="Card image" style="width:100%">
             <div class="card-body">
               <h4 class="card-title">Gallery</h4>
               <p class="card-text">To add or delete photos</p>
@@ -46,13 +46,16 @@
           </div>
 </div>              
  </div>
+ <div class="col-md-4">
+  <div class="card m-3" style="width:400px">
+        <img class="card-img-top" src="../../assets/undraw_online_article_kr64.png" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Table Even</h4>
+          <p class="card-text">To add Table Events</p>
+          <a class="btn btn-primary" routerLink='/table' >SEE Events</a>
+        </div>
+      </div>
+</div>              
 </div>
-          
-</div>
+  
 
-<div *ngIf="!currentUser.admin" >
-<br><br>
-<div style="text-align: center;">
-<img src="../../../assets/images/avc/error-404-found-glitch-effect_8024-4.jpg" alt="">
-</div>
-</div>

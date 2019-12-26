@@ -22,6 +22,15 @@ export class EventService {
     })
   }
 
+  createEvent(value) {
+    return this.db.collection('event').add({
+      date: value.date,
+      activity: value.activity,
+      attendees: value.attendees,
+      details: value.details
+    })
+  }
+
   getUsers() {
     return this.db.collection('events').snapshotChanges().pipe(
       map(changes => {
@@ -44,5 +53,24 @@ export class EventService {
   }
   getSelectedItem(id: string) {
   return this.db.collection('events').doc(id).valueChanges();
-  } 
+  }
+  
+  getEvents() {
+    return this.db.collection('event',ref => ref.orderBy('date')).snapshotChanges().pipe(
+      map(changes => {
+        return changes.map(a => {
+            const data = a.payload.doc.data() as any;
+            Object.keys(data).filter(key => data[key] instanceof Timestamp)
+                .forEach(key => data[key] = data[key].toDate())
+            data.id = a.payload.doc.id;
+            return data;
+          });
+        })
+    );
+
+  }
+
+  
+
+  
 }
