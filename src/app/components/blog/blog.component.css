@@ -19,16 +19,16 @@
 }
 .card {
     margin-bottom: 50px;
-    border: 1px solid #c0bfbf;
+    border: none;
     border-radius: 0;
-    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.16); */
+    box-shadow: 0 5px 80px rgba(0, 0, 0, 0.08);
     transition: all ease-in-out 0.2s!important;
     cursor: pointer;
 }
 .card:hover {
     transform: translateY(-20px);
-    border : 1px solid transparent ;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.16);
+    border: none;
+    box-shadow: 0 5px 80px rgba(0, 0, 0, 0.16);
 }
 .sub-heading {
     font-size: 0.9rem;

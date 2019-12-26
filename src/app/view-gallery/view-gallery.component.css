@@ -58,7 +58,16 @@ padding-bottom:30px;
 }
 
 
-.lightboxOverlay{
+#lightboxOverlay{
 overflow: hidden;
 position: fixed;
+ z-index: 9999900!important;
+}
+
+.item1 {
+  min-height: 30vh;
+}
+
+#lightbox{
+  z-index: 9999999!important;
 }

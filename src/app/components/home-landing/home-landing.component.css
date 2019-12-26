@@ -159,11 +159,16 @@ b {
   padding: 10px 20px;
   border-radius: 25px;
   border-color: #46b8da;
+  transition: all ease-in-out 0.3s;
 }
 
-#mybutton {
+.mybutton {
   z-index: 9999;
   position: fixed;
   bottom: 5vh;
   right: 5vw;
+}
+
+.addblog:hover{
+  background-color: #003a78;
 }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ElementRef } from "@angular/core";
+
+import {EventService } from '../../services/event.service';
+import {Params, Router,ActivatedRoute} from '@angular/router';
 import $ from "jquery";
 
 @Component({
@@ -8,7 +11,12 @@ import $ from "jquery";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  constructor(private elementRef: ElementRef) {}
+  
+  items: any = [];
+  
+  constructor(private elementRef: ElementRef ,  public eventService: EventService,
+    private router: Router,
+    private route: ActivatedRoute) {}
 
   ngOnInit() {
     var s = document.createElement("script");
@@ -50,5 +58,23 @@ export class HomeComponent implements OnInit {
         $("#e0").fadeIn(2000);
       });
     });
+    
+    this.getData() ;
+
   }
+
+  getData() {
+    this.eventService.getUsers()
+    .subscribe(result => {
+      console.log(result);
+      result.forEach((item) => {
+        console.log(item);
+        this.items.push(item);
+      }) 
+      console.log(this.items);
+    
+    })
+  }
+
+
 }

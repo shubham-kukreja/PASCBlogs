@@ -1,0 +1,68 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px ;
+    padding: 4px;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background: #3C8ADB;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border: 1px ;
+    align-self: center;
+    width: 80%;
+    height: 90%;
+    border-radius: 25px;
+
+    transition: background 0.2s;
+  }
+  
+  a{
+      margin-bottom: 20px;
+    transition: color 0.2s;    
+  }
+  
+a:hover{
+    color: #89D0F0;
+}
+
+  button:hover:hover {
+   background:#89D0F0 ;
+  }
+
+  .row{
+      display: inline;
+      margin: 0px;
+  }
+
+
+  .login-box input[type="email"], input[type="password"]
+{
+    border: none;
+    /* border-bottom: 1px solid #fff; */
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    transition: border-bottom 0.2s;
+    margin: 2px;
+}
+
+
+   

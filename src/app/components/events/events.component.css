@@ -308,3 +308,9 @@ body {
   padding: 6%;
   margin-bottom: 5%;
 }
+
+.scr_table{
+  position: relative;
+  height: 50vh;
+  overflow: auto;
+}

@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { AuthService } from '../../services/auth.service';
 
+
 @Component({
   selector: 'app-new-blog',
   templateUrl: './new-blog.component.html',
@@ -22,7 +23,7 @@ export class NewBlogComponent implements OnInit {
   created : boolean;
   category : string;
   public Editor = ClassicEditor;
-  constructor(private blogService : BlogService, private storage : AngularFireStorage,public authService : AuthService) { }
+  constructor(private blogService : BlogService, private storage : AngularFireStorage,public authService : AuthService , public router : Router) { }
 
   ngOnInit() {
   }
@@ -43,7 +44,7 @@ export class NewBlogComponent implements OnInit {
     this.blogService.create(data)
     setTimeout(() => {
       this.created = false;
-      window.location.href = "/blogs"
+      this.router.navigate(['/blogs'])
     }, 3000);
   }
   uploadImage(event)

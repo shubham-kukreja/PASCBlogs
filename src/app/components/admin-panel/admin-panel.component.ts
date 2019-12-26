@@ -21,6 +21,7 @@ export class AdminPanelComponent implements OnInit {
   
     setTimeout(() => {
       this.getAdmin()
+     
     }, 2000);
   
     
@@ -30,6 +31,7 @@ export class AdminPanelComponent implements OnInit {
   getAdmin()
   {
     this.afs.doc(`users/${this.angularFireAuth.auth.currentUser.uid}`).valueChanges().subscribe(item => {this.currentUser = item})
+
   }
 
 

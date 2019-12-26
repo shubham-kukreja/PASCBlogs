@@ -25,6 +25,7 @@ import { MainAdminComponent } from './components/main-admin/main-admin.component
 import { AdminEventsComponent } from './components/admin-events/admin-events.component';
 import { AdminViewComponent } from './components/admin-view/admin-view.component';
 import { AdminVdetailsComponent } from './components/admin-vdetails/admin-vdetails.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 
 
@@ -43,6 +44,7 @@ const routes: Routes = [
   {path : 'gallery', component : ViewGalleryComponent },
   {path : 'login', component : LoginComponent, canActivate : [SecureInnerPagesGuard]},
   {path : 'forgot', component : ForgotPasswordComponent, canActivate : [SecureInnerPagesGuard]},
+  {path : 'verify', component : VerifyEmailComponent, canActivate : [SecureInnerPagesGuard]},
   {path : 'signup', component : SignupComponent, canActivate : [SecureInnerPagesGuard]},
   {path : 'admin', component : AdminLoginComponent, canActivate : [AdminInnerGuard]},
   {path : 'adminPanel', component : AdminPanelComponent, canActivate : [ AuthGuard ]},
@@ -51,7 +53,7 @@ const routes: Routes = [
   {path : 'adminDetails/:id' , component : AdminVdetailsComponent, canActivate : [ AuthGuard ]},
 
 
-  {path : '', redirectTo: '/blogs', pathMatch: 'full' }
+  {path : '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

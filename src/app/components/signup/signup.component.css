@@ -6,24 +6,16 @@ body{
     font-family: sans-serif;
 }
 
-.back{
-    background: url('../../../assets/images/avc/three-pencils-eyeglasses-and-smartphone-on-white-table-876468.jpg');
-   height: 110%;
-   background-size: cover;
-}
-
 .login-box{
     width: auto;
     height: auto;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-   
-    
-  
+    background: rgba(0, 0, 0, 0);
+    color: #000;
     box-sizing: border-box;
     padding: 30px;
     border-radius: 25px;
-  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: none;
 }
 
 h1{
@@ -41,10 +33,10 @@ h1{
     width: 100%;
     margin-bottom: 20px;
 }
-.login-box input[type="email"], input[type="password"],input[type="text"]
+/* .login-box input[type="email"], input[type="password"],input[type="text"]
 {
     border: none;
-    /* border-bottom: 1px solid #fff; */
+    
     background: transparent;
     outline: none;
     height: 40px;
@@ -61,7 +53,7 @@ h1{
 }
 .login-box input[type="text"]:hover{
     border-bottom: 2px solid #fff;
-}
+} */
 .login-box input[type="submit"]
 {
     border: none;
@@ -82,8 +74,9 @@ h1{
 
 .login-box a{
     text-decoration: none;
+    cursor: pointer;
     font-size: 14px;
-    color: #fff;
+    /* color: #fff; */
     transition: color 0.3s;
 }
 .login-box a:hover
@@ -92,7 +85,9 @@ h1{
 }
 
 .forgot{
+    
     text-align: center;
+    color: #111111!important;
 }
 
 .btn{

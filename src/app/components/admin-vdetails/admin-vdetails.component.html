@@ -1,3 +1,6 @@
+<br><br><br>
+
+<div *ngIf="currentUser.admin">
 <nav class="navbar navbar-light bg-info">
     <span class="navbar-brand mb-0 h1">Admin Panel</span>
   </nav>
@@ -20,3 +23,11 @@
     </div>
   </div>
 </div>
+</div>
+
+<div *ngIf="!currentUser.admin" >
+  <br><br>
+  <div style="text-align: center;">
+  <img src="../../../assets/images/avc/error-404-found-glitch-effect_8024-4.jpg" alt="">
+  </div>
+  </div>

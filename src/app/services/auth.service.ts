@@ -22,7 +22,7 @@ export class AuthService {
   eventAuthError$ = this.eventAuthError.asObservable();
   newUser: any;
 log:any;
-
+User;
   constructor(
     public afs: AngularFirestore,   // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
@@ -153,7 +153,7 @@ log:any;
         userCredential.user.updateProfile({
           displayName: user.firstName + ' ' + user.lastName
         });
-        this.logout().then(() => this.router.navigate(['/login']) );
+        this.logout().then(() => this.router.navigate(['/verify']) );
         this.insertUserData(userCredential)
       })
       .catch(error => {
@@ -185,5 +185,5 @@ log:any;
   adminlogout() {
     this.logout().then(() => this.router.navigate(['/home']) );
   }
-  
+
 }

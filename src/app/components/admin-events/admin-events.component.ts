@@ -3,6 +3,11 @@ import {FormBuilder,FormGroup,Validators,FormControl} from '@angular/forms';
 import {MatDialog} from '@angular/material';
 import {Router } from '@angular/router';
 import{EventService} from  '../../services/event.service';
+import { Blog } from '../../shared/blog'
+import { AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
+import { AuthService } from '../../services/auth.service';
+import { AngularFireAuth } from "@angular/fire/auth";
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-admin-events',
@@ -29,11 +34,18 @@ export class AdminEventsComponent implements OnInit {
     private fb: FormBuilder,
     public dialog: MatDialog,
     private router: Router,
-    public eventService:EventService
+    public eventService:EventService,
+    public afs: AngularFirestore,public authService : AuthService, public angularFireAuth : AngularFireAuth
   ) { }
-
+  currentUser : any
   ngOnInit() {
     this.createForm();
+
+    setTimeout(() => {
+      this.getAdmin()
+    
+    }, 2000);
+
   }
 
   createForm() {
@@ -64,4 +76,13 @@ export class AdminEventsComponent implements OnInit {
       }
     )
   }
+
+
+  getAdmin()
+  {
+    this.afs.doc(`users/${this.angularFireAuth.auth.currentUser.uid}`).valueChanges().subscribe(item => {this.currentUser = item})
+
+  }
+
+
 }
