@@ -12,7 +12,7 @@ import {ElementRef} from '@angular/core';
 export class AdminLoginComponent implements OnInit {
 
   authError : any;
-  clicked = false;
+ 
 
   constructor(public authService : AuthService, private elementRef:ElementRef)  { }
 

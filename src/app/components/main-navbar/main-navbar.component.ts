@@ -22,7 +22,13 @@ export class MainNavbarComponent implements OnInit {
 
   ngOnInit() {
 
-
+    this.User = this.authService.afAuth.user;
+  this.authService.afAuth.auth.onAuthStateChanged(user => {
+    if(user)
+    {
+      this.getCurrent()
+    }
+  })
    
 
     $(window).scroll(function(){
@@ -34,17 +40,7 @@ export class MainNavbarComponent implements OnInit {
       }
   });
 
-  this.User = this.authService.afAuth.user;
-  this.authService.afAuth.auth.onAuthStateChanged(user => {
-    if(user)
-    {
-      this.getCurrent()
-    }
-  })
-
   }
-
-
 
   getCurrent() {
     this.afs.doc(`users/${this.angularFireAuth.auth.currentUser.uid}`).valueChanges().subscribe(item => {this.currentUser = item})

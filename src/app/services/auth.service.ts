@@ -100,7 +100,7 @@ User;
       })
       .then(async userCredential => {
         if (userCredential && userCredential.user.emailVerified) {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/blogs']);
         }
         else {
           if( this.log){

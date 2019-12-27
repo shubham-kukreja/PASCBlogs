@@ -19,13 +19,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.authService.eventAuthError$.subscribe( data => {
       this.authError = data;
-    });
-    this.clicked=false;
-    var s = document.createElement("script");
-    s.type = "text/javascript";
-    s.src = "../../../assets/scripts/login.js";
-    this.elementRef.nativeElement.appendChild(s);
+    })
+    // this.clicked=false;
+    // var s = document.createElement("script");
+    // s.type = "text/javascript";
+    // s.src = "../../../assets/scripts/login.js";
+    // this.elementRef.nativeElement.appendChild(s);
   }
+  
   login(frm) {
     this.authService.login(frm.value.email, frm.value.password);
   }
