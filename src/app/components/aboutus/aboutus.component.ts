@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {ElementRef} from '@angular/core';
+import { BlogService } from '../../services/blog.service'
+import { Observable } from 'rxjs';
+import { AngularFireStorage } from 'angularfire2/storage';
+import { finalize } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+
+export interface FormModel {
+  captcha?: string;
+}
+
 
 @Component({
   selector: 'app-aboutus',
@@ -8,7 +19,16 @@ import {ElementRef} from '@angular/core';
 })
 export class AboutusComponent implements OnInit {
 
-  constructor(private elementRef:ElementRef) { }
+  name : string;
+  email : string;
+  subject: string;
+  text : string;
+
+  public formModel: FormModel = {};
+
+  constructor(private blogService : BlogService, private storage : AngularFireStorage,public authService : AuthService , public router : Router , private elementRef:ElementRef) { }
+
+
 
   ngOnInit() {
     var s = document.createElement("script");
@@ -16,5 +36,23 @@ export class AboutusComponent implements OnInit {
   s.src = "../../../assets/scripts/AOS.js";
   this.elementRef.nativeElement.appendChild(s);
   }
+
+  createFeed()
+  {
+    const data = {
+      name : this.name,
+      email : this.email,
+      subject : this.subject,
+      text : this.text
+    };
+
+    this.blogService.createfeed(data)
+    setTimeout(() => {
+      window.alert("Feedback Received")
+      window.location.href="/aboutus"
+    }, 1000);
+  }
+
+
 
 }

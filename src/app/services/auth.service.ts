@@ -52,7 +52,7 @@ User;
     try {
       const result = await this.afAuth.auth.signInWithPopup(provider);
       this.ngZone.run(() => {
-        this.router.navigate(['home']);
+        this.router.navigate(['blogs']);
       });
       this.SetUserData(result.user);
     }

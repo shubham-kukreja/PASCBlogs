@@ -34,7 +34,6 @@ import { UploadTaskComponent } from './upload-task/upload-task.component';
 import { ViewGalleryComponent } from './view-gallery/view-gallery.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { HomeLandingComponent } from './components/home-landing/home-landing.component';
-import { MainAdminComponent } from './components/main-admin/main-admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { EventsComponent } from './components/events/events.component';
 import { DomainsComponent } from './components/domains/domains.component';
@@ -55,6 +54,8 @@ import { AdminVdetailsComponent } from './components/admin-vdetails/admin-vdetai
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { TableComponent } from './components/table/table.component';
 
+import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+import { AdminFeedbackComponent } from './components/admin-feedback/admin-feedback.component';
 
 
 @NgModule({
@@ -76,7 +77,6 @@ import { TableComponent } from './components/table/table.component';
     ViewGalleryComponent,
     ForgotPasswordComponent,
     HomeLandingComponent,
-    MainAdminComponent,
     HomeComponent,
     EventsComponent,
     DomainsComponent,
@@ -89,7 +89,8 @@ import { TableComponent } from './components/table/table.component';
     AdminViewComponent,
     AdminVdetailsComponent,
     VerifyEmailComponent,
-    TableComponent
+    TableComponent,
+    AdminFeedbackComponent
   ],
   imports: [
     BrowserModule,
@@ -114,6 +115,8 @@ import { TableComponent } from './components/table/table.component';
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
   ],
   providers: [
 

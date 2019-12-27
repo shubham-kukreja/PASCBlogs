@@ -1,0 +1,28 @@
+<br><br><br><br>
+<div *ngIf="currentUser.admin"><h1>FEEDBACK</h1>
+<div class="container">
+  
+<ng-container *ngFor = "let feed of feedback">
+
+        <div class="card"  >
+    <div class="card-body">
+    <h5 class="card-title heading" >{{feed.name }}</h5>
+    <p class="card-text sub-heading">{{feed.email}}</p>
+    <p class="card-text author">- {{feed.subject}}</p>
+    <p class="card-text date">{{feed.text}}</p>
+  
+</div>
+</div>
+
+</ng-container>
+
+</div>
+</div>
+
+
+<div *ngIf="!currentUser.admin" >
+    <br><br>
+    <div style="text-align: center;">
+    <img src="../../../assets/images/avc/error-404-found-glitch-effect_8024-4.jpg" alt="">
+    </div>
+    </div>

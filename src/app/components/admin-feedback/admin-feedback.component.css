@@ -1,0 +1,43 @@
+.card-img-top {
+    border-radius: 0;
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    overflow: hidden;
+}
+.card-body {
+    color: #464646;
+    padding: 25px;
+}
+.nack {
+    background-size: cover;
+}
+.crop {
+    width: 100%;
+    
+    overflow: hidden;
+}
+.card {
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 5px 80px rgba(0, 0, 0, 0.08);
+    transition: all ease-in-out 0.2s!important;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-20px);
+    border: none;
+    box-shadow: 0 5px 80px rgba(0, 0, 0, 0.16);
+}
+.sub-heading {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.author, .date {
+    font-size: 1rem;
+    font-weight: 400;
+}
+.author {
+    font-weight: 500;
+}

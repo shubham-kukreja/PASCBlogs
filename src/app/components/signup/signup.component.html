@@ -10,7 +10,7 @@
         <div class="col-12 col-lg-4 ">
           <div class="card login-box ">
             <h1>SignUp Here</h1>
-            <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+            <form #userRegForm="ngForm" #captchaProtectedForm="ngForm" (ngSubmit)="createUser(userRegForm)">
                   
               <div>
                 <label for="firstName">First name</label>
@@ -29,8 +29,18 @@
                 <label for="password">Password</label>
                 <input ngModel #password="ngModel" name="password" type="password" class="form-control">
                 </div>
-    
-                <input type="submit" name="submit" value="SignUp" >
+                <br>
+                <div style="text-align: center;">
+                <re-captcha
+                [(ngModel)]="formModel.captcha"
+                name="captcha"
+                required
+                siteKey="6LcrdcoUAAAAADF0yxaH5-lmx7droHzTSn0dwPJO"                
+                #captchaControl="ngModel"
+              ></re-captcha>
+              </div>
+              <br>
+              <div [hidden]="!captchaControl.valid"  ><input type="submit" name="submit" value="SignUp" ></div>                
     
                 <div class="forgot">
                 <a ><span class="redirect" routerLink="/login">Already Registered? Login Here</span></a>  

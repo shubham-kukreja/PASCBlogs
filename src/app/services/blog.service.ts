@@ -17,6 +17,8 @@ export class BlogService {
   itemDoc : AngularFirestoreDocument<Blog>
   Galleryitems : any 
   approveBlog : AngularFirestoreDocument<Blog>
+  feedback: any;
+
   getBlogs(): Blog[]{
     return BLOGS;
   }
@@ -57,6 +59,31 @@ export class BlogService {
   create(data : Blog) {
      this.itemsCollection.add(data)
   }
+
+  createfeed(value) {
+    return this.afs.collection('feedback').add({
+      name: value.name,
+      subject: value.subject,
+      email: value.email,
+      text: value.text
+    })
+ }
+
+
+ getFeedback() {
+  return this.afs.collection('feedback').snapshotChanges().pipe(
+    map(changes => {
+      return changes.map(a => {
+          const data = a.payload.doc.data() as any;
+          data.id = a.payload.doc.id;
+          return data;
+        });
+      })
+  );
+
+  return this.items
+}
+
   getImages() {
     this.Galleryitems = this.afs.collection('files').valueChanges()
     return this.Galleryitems;

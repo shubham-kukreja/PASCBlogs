@@ -65,10 +65,12 @@
 
           <div>
             <label for="password">Password</label>
-            <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+            <input ngModel #password="ngModel" name="password" type="password" class="form-control" >
           </div>
 
             <input type="submit" name="submit" value="Login" >
+            <br>
+            <div #recaptcha ></div>
 
             <div class="forgot">
             <a ><span class="redirect" routerLink="/forgot">Forgot Password ?</span></a>  

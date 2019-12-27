@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 
+
+export interface FormModel {
+  captcha?: string;
+}
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -8,6 +13,8 @@ import { AuthService } from '../../services/auth.service';
 })
 export class SignupComponent implements OnInit {
 
+  public formModel: FormModel = {};
+  
   constructor(public authService : AuthService) { }
   authError: any;
 

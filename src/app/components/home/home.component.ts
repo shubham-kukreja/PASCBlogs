@@ -59,7 +59,11 @@ export class HomeComponent implements OnInit {
       });
     });
     
-    this.getData() ;
+    setTimeout(() => {
+      this.getData() ;
+     
+    }, 2000);
+   
 
   }
 

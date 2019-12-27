@@ -21,12 +21,12 @@ import { TeamComponent } from './components/team/team.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { AdminInnerGuard } from './guard/admin-inner.guard';
-import { MainAdminComponent } from './components/main-admin/main-admin.component';
 import { AdminEventsComponent } from './components/admin-events/admin-events.component';
 import { AdminViewComponent } from './components/admin-view/admin-view.component';
 import { AdminVdetailsComponent } from './components/admin-vdetails/admin-vdetails.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import {TableComponent} from './components/table/table.component';
+import { AdminFeedbackComponent } from './components/admin-feedback/admin-feedback.component';
 
 
 
@@ -52,6 +52,7 @@ const routes: Routes = [
   {path : 'adminEvents', component : AdminEventsComponent, canActivate : [ AuthGuard ]},
   {path : 'adminView', component : AdminViewComponent, canActivate : [ AuthGuard ]},
   {path: 'table', component: TableComponent, canActivate: [AuthGuard]},
+  {path: 'feedback', component: AdminFeedbackComponent, canActivate: [AuthGuard]},
   {path : 'adminDetails/:id' , component : AdminVdetailsComponent, canActivate : [ AuthGuard ]},
 
 

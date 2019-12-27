@@ -23,6 +23,7 @@ export class AdminViewComponent implements OnInit {
     public afs: AngularFirestore,public authService : AuthService, public angularFireAuth : AngularFireAuth
   ) { }
 currentUser:any;
+
   ngOnInit() {
     this.getData();
 

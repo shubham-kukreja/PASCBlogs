@@ -233,22 +233,22 @@
             <div class="square box1" id="box1" data-aos="zoom-in">
               <div class="row">
                 <div class="col-12">
-                  <!-- <p id="letter">{{items[0].topic}}</p> -->
+                  <p id="letter">{{items[0].date | date }}</p> 
                 </div>
 
               </div>
               <div class="row p-4 py-auto text-center">
                 <div class="col-12 px-auto mytext">
-                  {{item[0].topic}}
+                  {{items[0].topic}}
                 </div>
 
               </div>
             </div>
             <div class="square mt-5 box2" id="box2" data-aos="zoom-in">
-              <p id="letter">M</p>
+              <p id="letter">{{items[0].date | date }}</p>
               <div class="row p-4 py-auto text-center">
                 <div class="col-12 px-auto mytext">
-                  Machine Learning SIG
+                  {{items[0].topic}}
                 </div>
 
               </div>
@@ -256,19 +256,19 @@
           </div>
           <div class="col-5">
             <div class="square row2 box2" id="box3" data-aos="zoom-in">
-              <p id="letter">A</p>
+              <p id="letter">{{items[0].date | date }}</p>
               <div class="row p-4 py-auto text-center">
                 <div class="col-12 px-auto mytext">
-                  Android SIG
+                  {{items[0].topic}}
                 </div>
 
               </div>
             </div>
             <div class="square mt-5 box1" id="box4" data-aos="zoom-in">
-              <p id="letter">P</p>
+              <p id="letter">{{items[0].date | date }}</p>
               <div class="row p-4 py-auto text-center">
                 <div class="col-12 px-auto mytext">
-                    PhotoShop SIG
+                  {{items[0].topic}}
                 </div>
 
               </div>
@@ -299,32 +299,24 @@
             </div>
           </div>
           <div id="e1">
-            <h1> first </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid libero at quaerat,
-              adipisci rerum veritatis optio suscipit quo? Maxime voluptatem sunt placeat? Commodi,
-              quam officiis optio molestiae non itaque</p>
-            <p class="date">23 August 2019</p>
+            <h1> {{items[0].topic}}</h1>
+            <p>{{items[0].description}}</p>
+            <p class="date">{{items[0].date | date }}</p>
           </div>
           <div id="e2">
-            <h1> second </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid libero at quaerat,
-              adipisci rerum veritatis optio suscipit quo? Maxime voluptatem sunt placeat? Commodi,
-              quam officiis optio molestiae non itaque</p>
-            <p class="date">23 August 2019</p>
+            <h1> {{items[0].topic}}</h1>
+            <p>{{items[0].description}}</p>
+            <p class="date">{{items[0].date | date }}</p>
           </div>
           <div id="e3">
-            <h1> third </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid libero at quaerat,
-              adipisci rerum veritatis optio suscipit quo? Maxime voluptatem sunt placeat? Commodi,
-              quam officiis optio molestiae non itaque</p>
-            <p class="date">23 August 2019</p>
+            <h1> {{items[0].topic}}</h1>
+            <p>{{items[0].description}}</p>
+            <p class="date">{{items[0].date | date }}</p>
           </div>
           <div id="e4">
-            <h1> fourth </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid libero at quaerat,
-              adipisci rerum veritatis optio suscipit quo? Maxime voluptatem sunt placeat? Commodi,
-              quam officiis optio molestiae non itaque</p>
-            <p class="date">23 August 2019</p>
+            <h1> {{items[0].topic}}</h1>
+            <p>{{items[0].description}}</p>
+            <p class="date">{{items[0].date | date }}</p>
           </div>
         </div>
 

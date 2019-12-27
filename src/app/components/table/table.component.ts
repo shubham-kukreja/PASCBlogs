@@ -3,6 +3,14 @@ import {FormBuilder,FormGroup,Validators,FormControl} from '@angular/forms';
 import {MatDialog} from '@angular/material';
 import {Router } from '@angular/router';
 import{EventService} from  '../../services/event.service';
+import { Observable } from 'rxjs';
+import { AngularFireStorage } from 'angularfire2/storage';
+import { finalize } from 'rxjs/operators';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { AuthService } from '../../services/auth.service';
+import { AngularFireAuth } from "@angular/fire/auth";
+import { AngularFirestore } from '@angular/fire/firestore';
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -11,6 +19,7 @@ import{EventService} from  '../../services/event.service';
 export class TableComponent implements OnInit {
 
   exampleForm: FormGroup;
+  currentUser : any ;
   validation_messages = {
     'activity': [
       {type: 'required',message:'topic is required'},
@@ -30,11 +39,15 @@ export class TableComponent implements OnInit {
     private fb: FormBuilder,
     public dialog: MatDialog,
     private router: Router,
-    public eventService:EventService
+    public eventService:EventService,
+    private storage : AngularFireStorage,public authService : AuthService , public angularFireAuth : AngularFireAuth,private db: AngularFirestore 
   ) { }
 
   ngOnInit() {
     this.createTable();
+    setTimeout(() => {
+      this.getAdmin()
+    }, 2000);
   }
 
   createTable() {
@@ -65,5 +78,12 @@ export class TableComponent implements OnInit {
       }
     )
   }
+
+
+  getAdmin()
+  {
+    this.db.doc(`users/${this.angularFireAuth.auth.currentUser.uid}`).valueChanges().subscribe(item => {this.currentUser = item})
+  }
+
 
 }

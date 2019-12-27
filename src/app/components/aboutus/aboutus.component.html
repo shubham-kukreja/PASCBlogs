@@ -302,17 +302,17 @@
       </div>
 
       <div class="col-lg-4 col-12  ">
-        <div class="card " style="margin-top: 20%;" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="card " style="margin-top: 20%;" data-aos="fade-in" data-aos-duration="1500">
           <div class="card-body">
             <h4 class="text-center">GET IN TOUCH</h4>
             <br /><br />
 
-            <form>
+            <form #captchaProtectedForm="ngForm" >
               <div class="form-group row">
                 <label for="firstname" class="col-2 col-form-label"><i
                     class="fa fa-user prefix contact-ico"></i></label>
                 <div class="col-10">
-                  <input type="text" class="form-control" name="firstname" placeholder="Your Name" id="firstname" />
+                  <input [(ngModel)]="name" type="text" class="form-control" name="firstname" placeholder="Your Name" id="firstname" />
                 </div>
               </div>
 
@@ -320,13 +320,13 @@
                 <label for="emailid" class="col-2 col-form-label"><i
                     class="fa fa-envelope prefix contact-ico"></i></label>
                 <div class="col-10">
-                  <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email" />
+                  <input [(ngModel)]="email" type="email" class="form-control" id="emailid" name="emailid" placeholder="Email" />
                 </div>
               </div>
               <div class="form-group row">
                 <label for="lastname" class="col-2 col-form-label"><i class="fa fa-tag prefix contact-ico"></i></label>
                 <div class="col-10">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" id="subject" />
+                  <input [(ngModel)]="subject" type="text" class="form-control" name="subject" placeholder="Subject" id="subject" />
                 </div>
               </div>
 
@@ -334,12 +334,21 @@
                 <label for="feedback" class="col-2 col-form-label"><i
                     class="fa fa-pencil prefix contact-ico"></i></label>
                 <div class="col-10">
-                  <textarea class="form-control" id="message" name="message" rows="6"></textarea>
+                  <textarea [(ngModel)]="text" class="form-control" id="message" name="message" rows="6"></textarea>
                 </div>
               </div>
               <br />
               <div class="text-center">
-                <button type="submit" class="btn btn-primary ">Submit</button>
+                <re-captcha
+                [(ngModel)]="formModel.captcha"
+                name="captcha"
+                required
+                siteKey="6LcrdcoUAAAAADF0yxaH5-lmx7droHzTSn0dwPJO"                
+                #captchaControl="ngModel"
+              ></re-captcha>
+              <br>
+                <button type="submit" class="btn btn-primary " (click)="createFeed()" [hidden]="!captchaControl.valid">Submit </button>
+              
               </div>
             </form>
           </div>
