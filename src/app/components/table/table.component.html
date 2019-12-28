@@ -19,7 +19,7 @@
               <mat-form-field class="input-style">
                 <input matInput placeholder="activity" class="form-control" formControlName="activity" required>
               </mat-form-field>
-              <ng-container *ngFor="let validation of validation_messages.topic">
+              <ng-container *ngFor="let validation of validation_messages.activity">
                 <mat-error *ngIf="exampleForm.get('activity').hasError(validation.type) && (exampleForm.get('activity').dirty || exampleForm.get('activity').touched)">{{validation.message}}</mat-error>
               </ng-container>
             </div>
@@ -28,7 +28,7 @@
               <mat-form-field class="input-style">
                 <input matInput placeholder="attendees" class="form-control" formControlName="attendees" required>
               </mat-form-field>
-              <ng-container *ngFor="let validation of validation_messages.description">
+              <ng-container *ngFor="let validation of validation_messages.attendees">
                 <mat-error *ngIf="exampleForm.get('attendees').hasError(validation.type) && (exampleForm.get('attendees').dirty || exampleForm.get('attendees').touched)">{{validation.message}}</mat-error>
               </ng-container>
             </div>
@@ -51,8 +51,16 @@
               <mat-form-field class="input-style">
                 <input matInput placeholder="details" class="form-control" formControlName="details" required>
               </mat-form-field>
-              <ng-container *ngFor="let validation of validation_messages.venue">
+              <ng-container *ngFor="let validation of validation_messages.details">
                 <mat-error *ngIf="exampleForm.get('details').hasError(validation.type) && (exampleForm.get('details').dirty || exampleForm.get('details').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="input-style">
+                <input matInput placeholder="speaker" class="form-control" formControlName="speaker" required>
+              </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.details">
+                <mat-error *ngIf="exampleForm.get('speaker').hasError(validation.type) && (exampleForm.get('speaker').dirty || exampleForm.get('speaker').touched)">{{validation.message}}</mat-error>
               </ng-container>
             </div>
 
