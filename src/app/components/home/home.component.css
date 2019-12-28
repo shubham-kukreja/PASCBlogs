@@ -39,7 +39,7 @@ html {
   top: 25%;
   left: 7%;
   font-size: 7.5vw;
-  z-index: 1000;
+  z-index: 999;
   /*text-align: center;*/
   /*font-weight: 300;*/
   color: #fff;
