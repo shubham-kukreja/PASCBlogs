@@ -1,27 +1,27 @@
 img {
-    margin: 20px 0 ;
+  margin: 20px 0;
 }
 h6 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size : 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
 }
 
 figure {
-    display: block;
+  display: block;
 }
 code {
-    padding : 10px;
-    background: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.05);
 }
 @media only screen and (max-width: 600px) {
-    .container {
-      margin: 0;
-      padding: 10px!important;
-    }
-    h1 {
-        font-size: 30px;
-    }
-    h4 {
-        font-size: 20px;
-    }
+  .container {
+    margin: 0;
+    /* padding: 10px!important; */
   }
+  h1 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}

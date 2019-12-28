@@ -1,6 +1,49 @@
 .container {
   text-align: center;
 }
+
+#heading {
+  margin-top: 80px;
+}
+
+.hdAndText {
+  padding: 0 100px;
+}
+
+.hdAndText .h1text {
+  font-size: 5vw;
+  color: #003a78;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 550;
+  /* margin-bottom: 50px */
+  font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  .hdAndText {
+    padding: 0 10%;
+  }
+  .hdAndText .h1text {
+    font-size: 4rem;
+  }
+}
+
+.yellow_line {
+  content: "";
+  position: relative;
+  bottom: 0px;
+  top: -15px;
+  left: 0;
+  right: 0px;
+  height: 10px;
+  width: 10%;
+  background-color: rgb(253, 184, 17);
+  z-index: 1;
+  margin-bottom: 5%;
+  transition: all 0.3s ease-in-out 0s;
+}
+
 img {
   width: 100%;
   margin-bottom: 10px;
@@ -8,66 +51,64 @@ img {
   border-radius: 15px;
   transition: all 0.3s;
   height: 100%;
-
 }
 
-img:hover{
-box-shadow: 0 8px 8px 0 rgba(5, 4, 4, 0.2), 0 6px 20px 0 rgba(8, 8, 8, 0.19);
+img:hover {
+  box-shadow: 0 8px 8px 0 rgba(5, 4, 4, 0.2), 0 6px 20px 0 rgba(8, 8, 8, 0.19);
 }
 
 .photo-gallery {
-color:#313437;
-background-color:#fff;
+  color: #313437;
+  background-color: #fff;
 }
 
 .photo-gallery p {
-color:#7d8285;
+  color: #7d8285;
 }
 
 .photo-gallery h2 {
-font-weight:bold;
-margin-bottom:40px;
-padding-top:40px;
-color:inherit;
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: inherit;
 }
 
-@media (max-width:767px) {
-.photo-gallery h2 {
-  margin-bottom:25px;
-  padding-top:25px;
-  font-size:24px;
-}
+@media (max-width: 767px) {
+  .photo-gallery h2 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+  }
 }
 
 .photo-gallery .intro {
-font-size:16px;
-max-width:500px;
-margin:0 auto 40px;
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 40px;
 }
 
 .photo-gallery .intro p {
-margin-bottom:0;
+  margin-bottom: 0;
 }
 
 .photo-gallery .photos {
-padding-bottom:20px;
+  padding-bottom: 20px;
 }
 
 .photo-gallery .item {
-padding-bottom:30px;
+  padding-bottom: 30px;
 }
 
-
-#lightboxOverlay{
-overflow: hidden;
-position: fixed;
- z-index: 9999900!important;
+#lightboxOverlay {
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999900 !important;
 }
 
 .item1 {
   min-height: 30vh;
 }
 
-#lightbox{
-  z-index: 9999999!important;
+#lightbox {
+  z-index: 9999999 !important;
 }

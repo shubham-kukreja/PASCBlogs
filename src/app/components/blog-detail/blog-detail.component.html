@@ -1,3 +1,5 @@
+<div class="m-5"></div>
+<div class="m-5"></div>
 <div class="container" style="padding: 6rem;">
   <h1 class="heading">{{ blog.heading }}</h1>
   <h4 class="font-weight-light text-muted">{{ blog.subHeading }}</h4>
@@ -11,7 +13,7 @@
   </div>
   <img src="{{ blog.image }}" alt="" class="img-fluid" />
   <div class="lead e2e-trusted-url" [innerHTML]="blog.content | keepHtml"></div>
-  
+
   <div *ngIf="!blog.approve">
     <button class="btn btn-primary m-2" (click)="markCompleted(blog.id)">
       Accept

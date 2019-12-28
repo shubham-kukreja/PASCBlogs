@@ -1,38 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
-#heading{
-  margin-top: 80px;
+#heading {
+  margin-top: 100px;
 }
 
-.hdAndText{
-    padding: 0 100px; 
+.hdAndText {
+  padding: 0 100px;
 }
 
 .hdAndText .h1text {
-    font-size: 5vw;
-    color: #003a78;
-    line-height: 1.2;
-    letter-spacing: 0;
-    font-weight: 550;
-    /* margin-bottom: 50px */
-    font-family: "Open Sans",sans-serif;
+  font-size: 5vw;
+  color: #003a78;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 550;
+  /* margin-bottom: 50px */
+  font-family: "Open Sans", sans-serif;
 }
 
-@media screen and (max-width: 900px)
-{
-  .hdAndText{
+@media screen and (max-width: 900px) {
+  .hdAndText {
     padding: 0 10%;
   }
   .hdAndText .h1text {
-  font-size: 3rem;
-  } 
-} 
+    font-size: 3rem;
+  }
+}
 
-.yellow_line{
+.yellow_line {
   content: "";
   position: relative;
   bottom: 0px;
@@ -48,60 +47,58 @@ body {
 }
 
 .cf1 {
-    padding-right: 6%;
-    padding-left: 6%;
+  padding-right: 6%;
+  padding-left: 6%;
 }
 .jumbotron {
-    background-color: black;
-    color: floralwhite;
-    border-radius: 0;
-    margin-bottom: 0;
+  background-color: black;
+  color: floralwhite;
+  border-radius: 0;
+  margin-bottom: 0;
 }
 
-.image{
-   
-    /* height: 100%; */
-    position: relative;
-    top: 10%;
-    width: 100%;
-    padding: 10%;
-    
+.image {
+  /* height: 100%; */
+  position: relative;
+  top: 10%;
+  width: 100%;
+  padding: 10%;
 }
 
-.myheading{
-    font-weight: 700;
-    font-size: 1.5rem;
+.myheading {
+  font-weight: 700;
+  font-size: 1.5rem;
 }
-.mycontainer{
-    margin: auto 100px;
+.mycontainer {
+  margin: auto 100px;
 }
-.container-fluid{
-    padding: 0;
-    box-shadow: 0 0 3px rgba(0,0,0,0.5);
-}
-
-.pulzion{
-    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    border-radius: 25px;
+.container-fluid {
+  padding: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
-.pulzionlogo{
-    width: 50%;
-    height: 50%;
-    position: cover;
+.pulzion {
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  border-radius: 25px;
 }
 
-.heading{
-    font-weight: normal;
-    text-transform: uppercase;
-    color: grey;
+.pulzionlogo {
+  width: 50%;
+  height: 50%;
+  position: cover;
 }
 
-.introText{
-    font-size: 1.4rem;
-    font-weight: normal;
-    font-family: 'Times New Roman', Times, serif;
+.heading {
+  font-weight: normal;
+  text-transform: uppercase;
+  color: grey;
+}
+
+.introText {
+  font-size: 1.4rem;
+  font-weight: normal;
+  font-family: "Times New Roman", Times, serif;
 }
 * {
   box-sizing: border-box;
@@ -117,7 +114,7 @@ body {
   padding: 25px;
   border-radius: 25px;
   height: 400px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 @media screen and (max-width: 992px) {
   .blog-slider {
@@ -150,20 +147,20 @@ body {
   width: 300px;
   flex-shrink: 0;
   height: 300px;
-  
+
   box-shadow: 4px 13px 30px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   transform: translateX(-80px);
   overflow: hidden;
 }
 .blog-slider__img:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  
+
   border-radius: 20px;
   opacity: 0.8;
 }
@@ -174,7 +171,7 @@ body {
   display: block;
   /* opacity: 0; */
   border-radius: 20px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 @media screen and (max-width: 768px) {
   .blog-slider__img {
@@ -210,7 +207,7 @@ body {
 .blog-slider__content > * {
   /* opacity: 0; */
   transform: translateY(25px);
-  transition: all .4s;
+  transition: all 0.4s;
 }
 .blog-slider__code {
   color: #7b7992;
@@ -247,7 +244,9 @@ body {
     width: 100%;
   }
 } */
-.blog-slider .swiper-container-horizontal > .swiper-pagination-bullets, .blog-slider .swiper-pagination-custom, .blog-slider .swiper-pagination-fraction {
+.blog-slider .swiper-container-horizontal > .swiper-pagination-bullets,
+.blog-slider .swiper-pagination-custom,
+.blog-slider .swiper-pagination-fraction {
   bottom: 10px;
   left: 0;
   width: 100%;
@@ -289,7 +288,7 @@ body {
   border-radius: 10px;
   background: #062744;
   opacity: 0.2;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .blog-slider__pagination .swiper-pagination-bullet-active {
   opacity: 1;
@@ -304,12 +303,12 @@ body {
   }
 }
 
-.p-8{
+.p-8 {
   padding: 6%;
   margin-bottom: 5%;
 }
 
-.scr_table{
+.scr_table {
   position: relative;
   height: 50vh;
   overflow: auto;

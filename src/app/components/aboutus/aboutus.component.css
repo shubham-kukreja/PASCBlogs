@@ -1,39 +1,38 @@
-#acmp{
+#acmp {
   margin: 10% 0;
 }
-#acmw{
+#acmw {
   margin-bottom: 10%;
 }
 
-#heading{
-  margin-top: 80px;
+#heading {
+  margin-top: 100px;
 }
 
-.hdAndText{
-    padding: 0 100px; 
+.hdAndText {
+  padding: 0 100px;
 }
 
 .hdAndText .h1text {
-    font-size: 5vw;
-    color: #003a78;
-    line-height: 1.2;
-    letter-spacing: 0;
-    font-weight: 550;
-    /* margin-bottom: 50px */
-    font-family: "Open Sans",sans-serif;
+  font-size: 5vw;
+  color: #003a78;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 550;
+  /* margin-bottom: 50px */
+  font-family: "Open Sans", sans-serif;
 }
 
-@media screen and (max-width: 900px)
-{
-  .hdAndText{
+@media screen and (max-width: 900px) {
+  .hdAndText {
     padding: 0 10%;
   }
   .hdAndText .h1text {
-  font-size: 3rem;
-  } 
-} 
+    font-size: 3rem;
+  }
+}
 
-.yellow_line{
+.yellow_line {
   content: "";
   position: relative;
   bottom: 0px;
@@ -47,7 +46,6 @@
   margin-bottom: 5%;
   transition: all 0.3s ease-in-out 0s;
 }
-
 
 .first {
   position: relative;

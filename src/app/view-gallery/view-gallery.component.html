@@ -17,19 +17,23 @@
 
 <div class="photo-gallery">
     <div class="container">
-        <div class="intro">
-            <h2 class="text-center"> Gallery</h2>
-       
+        <div id="heading">
+            <div class="container hdAndText" style="text-align: left;">
+                <h1 class="h1text">GALLERY</h1>
+                <div class="yellow_line"></div>
+            </div>
         </div>
-      
-        <div class="row photos " >
 
-            <ng-container *ngFor="let item of items" >
-            
-                
-                    <div class="col-sm-6 col-md-4  item item1 fix"><a href="{{item.downloadURL  }}" data-lightbox="photos"><img class="img-fluid" src="{{item.downloadURL  }}"></a></div>
-                
-              </ng-container>
-                   
+        <div class="row photos ">
+
+            <ng-container *ngFor="let item of items">
+
+
+                <div class="col-sm-6 col-md-4  item item1 fix"><a href="{{item.downloadURL  }}"
+                        data-lightbox="photos"><img class="img-fluid" src="{{item.downloadURL  }}"></a></div>
+
+            </ng-container>
+
+        </div>
     </div>
-</div></div>s
+</div>s
