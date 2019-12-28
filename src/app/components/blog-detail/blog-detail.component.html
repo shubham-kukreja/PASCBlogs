@@ -14,7 +14,7 @@
   <img src="{{ blog.image }}" alt="" class="img-fluid" />
   <div class="lead e2e-trusted-url" [innerHTML]="blog.content | keepHtml"></div>
 
-  <div *ngIf="!blog.approve">
+  <div *ngIf="!blog.approve && currentUser.admin">
     <button class="btn btn-primary m-2" (click)="markCompleted(blog.id)">
       Accept
     </button>
