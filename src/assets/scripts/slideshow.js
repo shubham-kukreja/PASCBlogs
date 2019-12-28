@@ -179,7 +179,7 @@ var Slideshow = function () {
 
   function load() {
     var options = {
-      showPagination: true
+      showPagination: false
     };
 
     var slideShow = new Slideshow(options);
