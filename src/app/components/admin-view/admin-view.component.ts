@@ -29,7 +29,7 @@ currentUser:any;
 
     setTimeout(() => {
       this.getAdmin()
-     
+
     }, 2000);
   }
 
