@@ -63,7 +63,11 @@
   color: white;
   font-weight: lighter;
 }
-
+h5 {
+  font-weight: lighter;
+  text-transform: none;
+  font-size: 1.08rem;
+}
 .footer p {
   color: white;
   font-weight: lighter;

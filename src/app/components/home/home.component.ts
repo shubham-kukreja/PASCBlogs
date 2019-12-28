@@ -70,9 +70,9 @@ export class HomeComponent implements OnInit {
   getData() {
     this.eventService.getUsers()
       .subscribe(result => {
-        console.log(result);
+        
         result.forEach((item) => {
-          console.log(item);
+          
           this.items.push(item);
         })
 
