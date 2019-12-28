@@ -11,56 +11,55 @@
           <div class="card login-box ">
             <h1>SignUp Here</h1>
             <form #userRegForm="ngForm" #captchaProtectedForm="ngForm" (ngSubmit)="createUser(userRegForm)">
-                  
+
               <div>
                 <label for="firstName">First name</label>
               <input ngModel #firstname="ngModel" name="firstName" type="text" class="form-control" id="firstName">
               </div>
-  
+
               <div><label for="lastName">Last name</label>
                 <input ngModel #lastname="ngModel" name="lastName" type="text" class="form-control" id="lastName" value=""></div>
-  
+
                   <div >
                     <label for="email">Email</label>
                     <input ngModel #email="ngModel" name="email" type="email" class="form-control">
                    </div>
-    
+
               <div>
                 <label for="password">Password</label>
                 <input ngModel #password="ngModel" name="password" type="password" class="form-control">
                 </div>
                 <br>
-                <div style="text-align: center;">
+                <div class="re" style="text-align: center;">
                 <re-captcha
                 [(ngModel)]="formModel.captcha"
                 name="captcha"
                 required
-                siteKey="6LcrdcoUAAAAADF0yxaH5-lmx7droHzTSn0dwPJO"                
+                siteKey="6LcrdcoUAAAAADF0yxaH5-lmx7droHzTSn0dwPJO"
                 #captchaControl="ngModel"
               ></re-captcha>
               </div>
               <br>
-              <div [hidden]="!captchaControl.valid"  ><input type="submit" name="submit" value="SignUp" ></div>                
-    
+              <div [hidden]="!captchaControl.valid"  ><input type="submit" name="submit" value="SignUp" ></div>
+
                 <div class="forgot">
-                <a ><span class="redirect" routerLink="/login">Already Registered? Login Here</span></a>  
+                <a ><span class="redirect" routerLink="/login">Already Registered? Login Here</span></a>
                 <br><br>
                 <p class="para"> Or</p> <br>
                 <button type="button" class="btn " (click)="authService.GoogleAuth()">
-                  Signup with Google 
-                  <i class="fa fa-google"></i>  
-                </button>  
+                  Signup with Google
+                  <i class="fa fa-google"></i>
+                </button>
               </div>
-    
+
                 </form>
-            
-            
+
+
             </div>
             </div>
-    
+
           </div>
         </div>
     </div>
     </div>
-    
-    
+

@@ -22,17 +22,21 @@ export class TableComponent implements OnInit {
   currentUser : any ;
   validation_messages = {
     'activity': [
-      {type: 'required',message:'topic is required'},
+      {type: 'required',message:'activity is required'},
     ],
     'date' : [
       {type: 'required',message:'date is required'}
     ],
     'attendees': [
-      {type: 'required',message:'description is required'}
+      {type: 'required',message:'attendees are required'}
     ],
     'details' : [
-      {type: 'required',message:'venue is required'}
+      {type: 'required',message:'details is required'}
+    ],
+    'speaker' : [
+      {type: 'required',message:'speaker is required'}
     ]
+
   }
 
   constructor(
@@ -40,7 +44,7 @@ export class TableComponent implements OnInit {
     public dialog: MatDialog,
     private router: Router,
     public eventService:EventService,
-    private storage : AngularFireStorage,public authService : AuthService , public angularFireAuth : AngularFireAuth,private db: AngularFirestore 
+    private storage : AngularFireStorage,public authService : AuthService , public angularFireAuth : AngularFireAuth,private db: AngularFirestore
   ) { }
 
   ngOnInit() {
@@ -55,7 +59,8 @@ export class TableComponent implements OnInit {
       activity: ['',Validators.required],
     date: ['',Validators.required],
     attendees: ['',Validators.required],
-    details: ['',Validators.required]
+    details: ['',Validators.required],
+      speaker: ['', Validators.required]
     })
   }
 
@@ -64,10 +69,11 @@ export class TableComponent implements OnInit {
       activity: new FormControl('',Validators.required),
       date: new FormControl('',Validators.required),
       attendees: new FormControl('',Validators.required),
-      details: new FormControl('',Validators.required)
+      details: new FormControl('',Validators.required),
+      speaker: new FormControl('',Validators.required)
     });
 
-   
+
   }
   onSubmit(value: any) {
     this.eventService.createEvent(value)

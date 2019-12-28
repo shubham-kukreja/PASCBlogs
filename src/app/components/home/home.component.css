@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -34,16 +35,18 @@ html {
 }
 
 .heading {
-   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 30%;
-  left: 50%; 
-  font-size: 6vw;
+  position: absolute;
+  top: 25%;
+  left: 7%;
+  font-size: 7.5vw;
   z-index: 1000;
-  text-align: center;
-  font-weight: 300;
+  /*text-align: center;*/
+  /*font-weight: 300;*/
   color: #fff;
-  size: 50%;
+  font-family: 'Lato', sans-serif;
+  text-shadow: 1px 1px  3px #000,
+               -1px -1px 3px  #000;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -2986,3 +2989,79 @@ body[data-route-option="next-section"] .c-header-home_buttons {
   animation-duration: 1s;
   animation-delay: 0s;
 }
+.cd-headline.rotate-1 .cd-words-wrapper {
+  display: inline-block;
+  perspective: 300px;
+}
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cd-headline.rotate-1 b.is-visible {
+  position: relative;
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cd-headline.rotate-1 b.is-visible {
+  position: relative;
+  opacity: 1;
+  transform: rotateX(0deg);
+  animation: cd-rotate-1-in 1.2s;
+}
+
+.cd-headline.rotate-1 b.is-hidden {
+  transform: rotateX(180deg);
+  animation: cd-rotate-1-out 1.2s;
+}
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
+

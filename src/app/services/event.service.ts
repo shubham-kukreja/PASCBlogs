@@ -19,6 +19,7 @@ export class EventService {
       description: value.description,
       venue: value.venue,
       date: value.date
+
     })
   }
 
@@ -27,7 +28,8 @@ export class EventService {
       date: value.date,
       activity: value.activity,
       attendees: value.attendees,
-      details: value.details
+      details: value.details,
+      speaker : value.speaker
     })
   }
 
@@ -54,7 +56,7 @@ export class EventService {
   getSelectedItem(id: string) {
   return this.db.collection('events').doc(id).valueChanges();
   }
-  
+
   getEvents() {
     return this.db.collection('event',ref => ref.orderBy('date')).snapshotChanges().pipe(
       map(changes => {
@@ -70,7 +72,7 @@ export class EventService {
 
   }
 
-  
 
-  
+
+
 }

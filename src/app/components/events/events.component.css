@@ -313,3 +313,11 @@ body {
   height: 50vh;
   overflow: auto;
 }
+
+@media screen and (max-width: 480px){
+  .selfmargin{
+    /*margin-left: 9%;*/
+    overflow: hidden;
+    padding-left: 4.8%;
+  }
+}

@@ -227,7 +227,7 @@
 
 /* color: #000;
     text-transform: uppercase;
-     background-color: #eee; 
+     background-color: #eee;
     animation: moveline 1s linear; */
 
 .navbar-default .navbar-toggle:focus,
@@ -320,4 +320,12 @@ nav.fill ul li a:hover:after {
 #text {
   font-weight: 600;
   /* font-size: 1.2rem;x */
+}
+@media screen and (max-width: 480px){
+  .navlogo{
+    width: 80%;
+  }
+  .navbar{
+    margin-bottom: 10px;
+  }
 }

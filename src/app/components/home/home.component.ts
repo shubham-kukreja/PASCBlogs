@@ -29,6 +29,12 @@ export class HomeComponent implements OnInit {
     s1.src = "../../../assets/scripts/slideshow.js";
     this.elementRef.nativeElement.appendChild(s1);
 
+    var s2 = document.createElement("script");
+    s2.type = "text/javascript";
+    s2.src = "../../../assets/scripts/type.js";
+    this.elementRef.nativeElement.appendChild(s2);
+
+
 
     // $(window).scroll(function () {
     //   $(".button,.button1").css("opacity", 0 + $(window).scrollTop() / 500);
@@ -70,9 +76,9 @@ export class HomeComponent implements OnInit {
   getData() {
     this.eventService.getUsers()
       .subscribe(result => {
-        
+
         result.forEach((item) => {
-          
+
           this.items.push(item);
         })
 

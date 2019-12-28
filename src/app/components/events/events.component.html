@@ -1,4 +1,6 @@
 <div class="m-5"></div>
+<div class="selfmargin">
+
 
 <section id="heading">
   <div class="container hdAndText" style="text-align: left;">
@@ -8,14 +10,15 @@
 </section>
 
 <section>
-  <div class="container scr_table">
+  <div class="container scr_table table-responsive">
     <table class="table">
       <thead>
         <tr>
           <th scope="col">Date</th>
           <th scope="col">Event/Activity</th>
           <th scope="col">Attendees</th>
-          <th scope="col">Details</th>
+          <th scope="col" class="text-center" >Details</th>
+          <th scope="col"> Speaker </th>
         </tr>
       </thead>
       <tbody *ngFor="let item of items">
@@ -24,6 +27,7 @@
           <td>{{ item.activity }}</td>
           <td>{{ item.attendees }}</td>
           <td>{{ item.details }}</td>
+          <td> {{item.speaker}} </td>
         </tr>
       </tbody>
     </table>
@@ -95,7 +99,7 @@
     </div>
 </div>
   </section> -->
-
+<br><br><br>
 <section id="cards mt-5 container">
   <div class="row m-md-5" data-aos="fade-up" data-aos-duration="1000" style="width: 100vw;">
     <div class="col-xl-10">
@@ -201,3 +205,4 @@
     </div>
   </div>
 </section>
+</div>
