@@ -40,7 +40,7 @@ const routes: Routes = [
   {path : 'blogdetail/:id', component : BlogDetailComponent},
   {path : 'new', component : NewBlogComponent, canActivate : [AuthGuard] },
   {path : 'reviewblogs', component : AdminComponent, canActivate : [AuthGuard]},
-  {path : 'profile', component : ProfileComponent, canActivate : [AuthGuard]},
+  {path : 'profile', component : ProfileComponent, canActivate : [AuthGuard]}, 
   {path : 'uploadGallery', component : UploaderComponent, canActivate : [AuthGuard]},
   {path : 'gallery', component : ViewGalleryComponent },
   {path : 'login', component : LoginComponent, canActivate : [SecureInnerPagesGuard]},
@@ -56,7 +56,7 @@ const routes: Routes = [
   {path : 'adminDetails/:id' , component : AdminVdetailsComponent, canActivate : [ AuthGuard ]},
 
 
-  {path : '', redirectTo: 'home', pathMatch: 'full' }
+  {path : '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

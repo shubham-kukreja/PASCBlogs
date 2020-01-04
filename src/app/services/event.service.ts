@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 import { firestore } from 'firebase/app';
-// import Timestamp = firestore.Timestamp;
+import Timestamp = firestore.Timestamp;
 
 @Injectable({
   providedIn: 'root'
@@ -34,18 +34,17 @@ export class EventService {
   }
 
   getUsers() {
-    return this.db.collection('events').snapshotChanges()
-  //   .pipe(
-  //     map(changes => {
-  //         return changes.map(a => {
-  //             const data = a.payload.doc.data() as any;
-  //             Object.keys(data).filter(key => data[key] instanceof Timestamp)
-  //                 .forEach(key => data[key] = data[key].toDate())
-  //             data.id = a.payload.doc.id;
-  //             return data;
-  //         });
-  //     })
-  // );;
+    return this.db.collection('events').snapshotChanges().pipe(
+      map(changes => {
+          return changes.map(a => {
+              const data = a.payload.doc.data() as any;
+              Object.keys(data).filter(key => data[key] instanceof Timestamp)
+                  .forEach(key => data[key] = data[key].toDate())
+              data.id = a.payload.doc.id;
+              return data;
+          });
+      })
+  );;
   }
 
   deleteUser(userKey) {
@@ -59,18 +58,17 @@ export class EventService {
   }
 
   getEvents() {
-    return this.db.collection('event',ref => ref.orderBy('date')).snapshotChanges()
-    // .pipe(
-    //   map(changes => {
-    //     return changes.map(a => {
-    //         const data = a.payload.doc.data() as any;
-    //         Object.keys(data).filter(key => data[key] instanceof Timestamp)
-    //             .forEach(key => data[key] = data[key].toDate())
-    //         data.id = a.payload.doc.id;
-    //         return data;
-    //       });
-    //     })
-    // );
+    return this.db.collection('event',ref => ref.orderBy('date')).snapshotChanges().pipe(
+      map(changes => {
+        return changes.map(a => {
+            const data = a.payload.doc.data() as any;
+            Object.keys(data).filter(key => data[key] instanceof Timestamp)
+                .forEach(key => data[key] = data[key].toDate())
+            data.id = a.payload.doc.id;
+            return data;
+          });
+        })
+    );
 
   }
 

@@ -57,7 +57,6 @@ import { TableComponent } from './components/table/table.component';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 import { AdminFeedbackComponent } from './components/admin-feedback/admin-feedback.component';
 import { FooterComponent } from './components/footer/footer.component';
-import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 
 @NgModule({
@@ -122,7 +121,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
     RecaptchaFormsModule
   ],
   providers: [
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
+
   ],
   bootstrap: [AppComponent]
 })
